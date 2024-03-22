@@ -1,0 +1,17 @@
+distribution-functions-probability-densities-and-standard-distribution-functions
+distribution-functions
+probability-densities-and-their-relations
+standard-distribution-functions
+discrete-random-variables
+example-1-voice-communication-system
+example-2-customer-arrivals-at-a-store
+example-3-defective-products-in-manufacturing
+example-4-number-of-accidents-on-a-highway
+example-5-flaws-in-a-software-program
+understanding-probability-distributions-and-probability-mass-functions
+what-is-a-probability-distribution
+what-is-a-probability-mass-function-pmf
+how-do-they-help
+probability-mass-function-pmf-for-discrete-random-variables
+the-pool-of-tears
+a-caucus-race-and-a-long-tale

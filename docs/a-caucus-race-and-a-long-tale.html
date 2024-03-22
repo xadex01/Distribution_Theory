@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 A caucus-race and a long tale | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 3 A caucus-race and a long tale | YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <title>Chapter 3 A caucus-race and a long tale | Distribution Theory</title>
+  <meta name="description" content="Chapter 3 A caucus-race and a long tale | Distribution Theory" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 A caucus-race and a long tale | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 3 A caucus-race and a long tale | Distribution Theory" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 A caucus-race and a long tale | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 3 A caucus-race and a long tale | Distribution Theory" />
   
   
   
 
-<meta name="author" content="YOUR NAME HERE" />
+<meta name="author" content="AbdulHafiz Abba" />
 
 
-<meta name="date" content="2020-08-10" />
+<meta name="date" content="2024-03-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,8 @@
   
 <link rel="prev" href="the-pool-of-tears.html"/>
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +49,16 @@
 
 
 
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -66,10 +73,30 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">Distribution Theory</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Down the rabbit-hole</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Distribution Functions, Probability Densities, and Standard Distribution Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#distribution-functions"><i class="fa fa-check"></i><b>1.1</b> Distribution Functions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#probability-densities-and-their-relations"><i class="fa fa-check"></i><b>1.2</b> Probability Densities and their Relations</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#standard-distribution-functions"><i class="fa fa-check"></i><b>1.3</b> Standard Distribution Functions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#discrete-random-variables"><i class="fa fa-check"></i><b>1.4</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#example-1-voice-communication-system"><i class="fa fa-check"></i><b>1.4.1</b> Example 1: Voice Communication System</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#example-2-customer-arrivals-at-a-store"><i class="fa fa-check"></i><b>1.4.2</b> Example 2: Customer Arrivals at a Store</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#example-3-defective-products-in-manufacturing"><i class="fa fa-check"></i><b>1.4.3</b> Example 3: Defective Products in Manufacturing</a></li>
+<li class="chapter" data-level="1.4.4" data-path="index.html"><a href="index.html#example-4-number-of-accidents-on-a-highway"><i class="fa fa-check"></i><b>1.4.4</b> Example 4: Number of Accidents on a Highway</a></li>
+<li class="chapter" data-level="1.4.5" data-path="index.html"><a href="index.html#example-5-flaws-in-a-software-program"><i class="fa fa-check"></i><b>1.4.5</b> Example 5: Flaws in a Software Program</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#understanding-probability-distributions-and-probability-mass-functions"><i class="fa fa-check"></i><b>1.5</b> Understanding Probability Distributions and Probability Mass Functions</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#what-is-a-probability-distribution"><i class="fa fa-check"></i><b>1.5.1</b> What is a Probability Distribution?</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#what-is-a-probability-mass-function-pmf"><i class="fa fa-check"></i><b>1.5.2</b> What is a Probability Mass Function (PMF)?</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#how-do-they-help"><i class="fa fa-check"></i><b>1.5.3</b> How Do They Help?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>2</b> The pool of tears</a></li>
 <li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
 <li class="divider"></li>
@@ -83,7 +110,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distribution Theory</a>
           </h1>
         </div>
 
@@ -91,8 +118,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="a-caucus-race-and-a-long-tale" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> A caucus-race and a long tale</h1>
+<div id="a-caucus-race-and-a-long-tale" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> A caucus-race and a long tale<a href="a-caucus-race-and-a-long-tale.html#a-caucus-race-and-a-long-tale" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
 </div>
             </section>
@@ -105,7 +132,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -124,6 +150,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -132,7 +159,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/03-race.Rmd",
+"link": "https://github.com/xadex01/Distribution_Theory/edit/main/Chapter-3.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -140,10 +167,14 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/03-race.Rmd",
+"link": "https://github.com/xadex01/Distribution_Theory/blob/main/Chapter-3.Rmd",
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -151,6 +182,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
