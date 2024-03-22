@@ -109,6 +109,120 @@ f(x_i) = P(X=x_i)
 \sum_{i}^{n} f(x_i) = 1
 \): The sum of probabilities for all possible values \( x_i \) equals 1, denoted as:
 
+### Example: Probability Distribution of Admissions at State University Gadau
 
+Let's consider State University Gadau as a case study to determine the probability distribution of admissions. We define a random variable \( X \) to represent the number of applicants admitted to the university. Assume that the probability of admission for each applicant is 0.3, and admissions are independent of each other. Our goal is to determine the probability distribution of \( X \).
+
+#### Special Cases:
+- If the first applicant is admitted, then \( X = 1 \).
+- If the first applicant is rejected but the second is admitted, then \( X = 2 \).
+- This pattern continues for subsequent applicants.
+
+#### Probability Distribution:
+The probability of admitting the \( k \)th applicant is \( (1 - 0.3)^{k - 1} \times 0.3 \).
+- We use the formula \( P(X = k) = (1 - p)^{k - 1} \times p \) to describe the probabilities associated with \( X \).
+- This formula represents a geometric random variable, where \( p \) is the probability of success (admission) in each trial.
+
+#### Calculation:
+Let's calculate the probability of admission for the first few applicants:
+- For \( X = 1 \): \( P(X = 1) = (1 - 0.3)^{0} \times 0.3 = 0.3 \).
+- For \( X = 2 \): \( P(X = 2) = (1 - 0.3)^{1} \times 0.3 = 0.21 \).
+- Similarly, we can calculate for \( X = 3, 4, \ldots \).
+
+### Example 3-13: Determining the Probability Mass Function of a Random Variable
+
+The sample space of a random experiment is \( S = \{a, b, c, d, e, f\} \),and each outcome is equally likely. A random variable is defined as follows:
+
+| Outcome | \(x\)   |
+|---------|--------|
+| a       |   0    |
+| b       |   0    |
+| c       |  1.5   |
+| d       |  1.5   |
+| e       |   2    |
+| f       |   3    |
+
+Determine the probability mass function (PMF) of \( X \). 
+
+**Solution**
+We need to find the probability of each value in the range of \( X \).
+
+#### Calculation:
+- \( P(X = 0) \): The values 0 occur twice in the outcomes, for outcomes a and b. Since each outcome is equally likely, \( P(X = 0) = \frac{2}{6} = \frac{1}{3} \).
+- \( P(X = 1.5) \): The values 1.5 occur twice in the outcomes, for outcomes c and d. Hence, \( P(X = 1.5) = \frac{2}{6} = \frac{1}{3} \).
+- \( P(X = 2) \): The value 2 occurs once in the outcomes, for outcome e. Thus, \( P(X = 2) = \frac{1}{6} \).
+- \( P(X = 3) \): The value 3 occurs once in the outcomes, for outcome f. Therefore, \( P(X = 3) = \frac{1}{6} \).
+
+#### Probability Mass Function (PMF) of \( X \):
+- \( P(X = 0) = \frac{1}{3} \)
+- \( P(X = 1.5) = \frac{1}{3} \)
+- \( P(X = 2) = \frac{1}{6} \)
+- \( P(X = 3) = \frac{1}{6} \)
+
+The probability mass function of \( X \) is given by:
+\[ P(X = x) = \begin{cases} 
+\frac{1}{3} & \text{if } x = 0 \text{ or } x = 1.5 \\
+\frac{1}{6} & \text{if } x = 2 \text{ or } x = 3 \\
+0 & \text{otherwise} 
+\end{cases} \]
+
+This PMF describes the probabilities associated with each possible value of the random variable \( X \).
+
+
+### Example 3-25
+
+An assembly consists of three mechanical components. The probabilities that the first, second, and third components meet specifications are 0.95, 0.98, and 0.99, respectively. Assume that the components are independent. Determine the probability mass function of the number of components in the assembly that meet specifications.
+
+#### Solution:
+
+Let's define a random variable \( X \) to represent the number of components in the assembly that meet specifications. We can observe that \( X \) can take on values from 0 to 3, as there can be zero, one, two, or all three components that meet specifications.
+
+#### Calculation:
+- \( P(X = 0) \): The probability that none of the components meet specifications is calculated by multiplying the probabilities of each component failing to meet specifications: \( P(X = 0) = (1 - 0.95) \times (1 - 0.98) \times (1 - 0.99) \).
+- \( P(X = 1) \): The probability that exactly one component meets specifications is calculated by considering the probability that one component meets specifications and the other two fail: \( P(X = 1) = (0.95) \times (1 - 0.98) \times (1 - 0.99) \), and so on for \( X = 2 \) and \( X = 3 \).
+
+#### Probability Mass Function (PMF) of \( X \):
+- \( P(X = 0) = (1 - 0.95) \times (1 - 0.98) \times (1 - 0.99) = 8 \times 10^{-6}\)
+- \( P(X = 1) = (0.95) \times (1 - 0.98) \times (1 - 0.99) + (1 - 0.95) \times (0.98) \times (1 - 0.99) + (1 - 0.95) \times (1 - 0.98) \times (0.99) = 0.0012\)
+- \( P(X = 2) = (0.95) \times (0.98) \times (1 - 0.99) + (0.95) \times (1 - 0.98) \times (0.99) + (1 - 0.95) \times (0.98) \times (0.99)  = 0.0576 \)
+- \( P(X = 3) = (0.95) \times (0.98) \times (0.99)  = 0.9412\)
+
+Calculating these probabilities will give us the probability mass function of \( X \), representing the likelihood of having 0, 1, 2, or 3 components in the assembly that meet specifications.
+
+## Cumulative Distribution Functions (CDFs)
+
+In probability theory and statistics, a Cumulative Distribution Function (CDF) is a function that gives the probability that a random variable \( X \) will take on a value less than or equal to a given value \( x \). Mathematically, the CDF of a random variable \( X \), denoted by \( F(x) \), is defined as:
+
+\[ F(x) = P(X \leq x) \]
+
+In simpler terms, the CDF at a specific value \( x \) tells us the probability that the random variable \( X \) will be less than or equal to \( x \). This function provides a comprehensive summary of the distribution of \( X \), capturing both the probability of individual values and cumulative probabilities up to a certain value.
+
+### Properties of CDFs:
+
+The cumulative distribution function of a discrete random variable X, denoted as $F(x)$, is
+\[ F(x) = P(X \le x)=\sum_{x_i \le x}f(x_i) \]
+
+For a discrete random variable X, $F(x)$ satisfies the following properties.
+
+1. **Non-Decreasing**: \(F(x) = P(X \le x)=\sum_{x_i \le x}f(x_i) \) meaning as \( x \) increases, \( F(x) \) does not decrease.
+
+2. **Bounded**: \(0 \le F(x) \le 1\) The CDF is bounded between 0 and 1, inclusive.
+
+3. **Monotonicity**: If \( x \le y \), then \( F(x) \le F(y) \). In other words, the CDF is monotonically non-decreasing.
+
+### Example:
+Consider a random variable \( X \) representing the outcome of rolling a fair six-sided die. The CDF of \( X \) would be:
+
+\[ F(x) = \begin{cases} 
+0 & \text{if } x < 1 \\
+\frac{1}{6} & \text{if } 1 \leq x < 2 \\
+\frac{2}{6} & \text{if } 2 \leq x < 3 \\
+\frac{3}{6} & \text{if } 3 \leq x < 4 \\
+\frac{4}{6} & \text{if } 4 \leq x < 5 \\
+\frac{5}{6} & \text{if } 5 \leq x < 6 \\
+1 & \text{if } x \geq 6 \\
+\end{cases} \]
+
+This CDF tells us the probability of rolling a number less than or equal to \( x \) on a fair six-sided die. For example, \( F(3) \) would be \( \frac{3}{6} = 0.5 \), indicating a 50% chance of rolling a number less than or equal to 3.
 
 

@@ -95,7 +95,17 @@
 <li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#what-is-a-probability-mass-function-pmf"><i class="fa fa-check"></i><b>1.5.2</b> What is a Probability Mass Function (PMF)?</a></li>
 <li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#how-do-they-help"><i class="fa fa-check"></i><b>1.5.3</b> How Do They Help?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example-probability-distribution-of-admissions-at-state-university-gadau"><i class="fa fa-check"></i><b>1.6.1</b> Example: Probability Distribution of Admissions at State University Gadau</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#example-3-13-determining-the-probability-mass-function-of-a-random-variable"><i class="fa fa-check"></i><b>1.6.2</b> Example 3-13: Determining the Probability Mass Function of a Random Variable</a></li>
+<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#example-3-25"><i class="fa fa-check"></i><b>1.6.3</b> Example 3-25</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#cumulative-distribution-functions-cdfs"><i class="fa fa-check"></i><b>1.7</b> Cumulative Distribution Functions (CDFs)</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#properties-of-cdfs"><i class="fa fa-check"></i><b>1.7.1</b> Properties of CDFs:</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#example"><i class="fa fa-check"></i><b>1.7.2</b> Example:</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="the-pool-of-tears.html"><a href="the-pool-of-tears.html"><i class="fa fa-check"></i><b>2</b> The pool of tears</a></li>
 <li class="chapter" data-level="3" data-path="a-caucus-race-and-a-long-tale.html"><a href="a-caucus-race-and-a-long-tale.html"><i class="fa fa-check"></i><b>3</b> A caucus-race and a long tale</a></li>
@@ -215,7 +225,154 @@
 <li><span class="math inline">\(f(x_i) = P(X=x_i)\)</span>: The probability assigned to each value <span class="math inline">\(x_i\)</span> is non-negative.</li>
 <li><span class="math inline">\(\sum_{i}^{n} f(x_i) = 1\)</span>: The sum of probabilities for all possible values <span class="math inline">\(x_i\)</span> equals 1, denoted as:</li>
 </ol>
+<div id="example-probability-distribution-of-admissions-at-state-university-gadau" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Example: Probability Distribution of Admissions at State University Gadau<a href="index.html#example-probability-distribution-of-admissions-at-state-university-gadau" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider State University Gadau as a case study to determine the probability distribution of admissions. We define a random variable <span class="math inline">\(X\)</span> to represent the number of applicants admitted to the university. Assume that the probability of admission for each applicant is 0.3, and admissions are independent of each other. Our goal is to determine the probability distribution of <span class="math inline">\(X\)</span>.</p>
+<div id="special-cases" class="section level4 hasAnchor" number="1.6.1.1">
+<h4><span class="header-section-number">1.6.1.1</span> Special Cases:<a href="index.html#special-cases" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>If the first applicant is admitted, then <span class="math inline">\(X = 1\)</span>.</li>
+<li>If the first applicant is rejected but the second is admitted, then <span class="math inline">\(X = 2\)</span>.</li>
+<li>This pattern continues for subsequent applicants.</li>
+</ul>
+</div>
+<div id="probability-distribution" class="section level4 hasAnchor" number="1.6.1.2">
+<h4><span class="header-section-number">1.6.1.2</span> Probability Distribution:<a href="index.html#probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The probability of admitting the <span class="math inline">\(k\)</span>th applicant is <span class="math inline">\((1 - 0.3)^{k - 1} \times 0.3\)</span>.
+- We use the formula <span class="math inline">\(P(X = k) = (1 - p)^{k - 1} \times p\)</span> to describe the probabilities associated with <span class="math inline">\(X\)</span>.
+- This formula represents a geometric random variable, where <span class="math inline">\(p\)</span> is the probability of success (admission) in each trial.</p>
+</div>
+<div id="calculation" class="section level4 hasAnchor" number="1.6.1.3">
+<h4><span class="header-section-number">1.6.1.3</span> Calculation:<a href="index.html#calculation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s calculate the probability of admission for the first few applicants:
+- For <span class="math inline">\(X = 1\)</span>: <span class="math inline">\(P(X = 1) = (1 - 0.3)^{0} \times 0.3 = 0.3\)</span>.
+- For <span class="math inline">\(X = 2\)</span>: <span class="math inline">\(P(X = 2) = (1 - 0.3)^{1} \times 0.3 = 0.21\)</span>.
+- Similarly, we can calculate for <span class="math inline">\(X = 3, 4, \ldots\)</span>.</p>
+</div>
+</div>
+<div id="example-3-13-determining-the-probability-mass-function-of-a-random-variable" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Example 3-13: Determining the Probability Mass Function of a Random Variable<a href="index.html#example-3-13-determining-the-probability-mass-function-of-a-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The sample space of a random experiment is <span class="math inline">\(S = \{a, b, c, d, e, f\}\)</span>,and each outcome is equally likely. A random variable is defined as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th><span class="math inline">\(x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>1.5</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Determine the probability mass function (PMF) of <span class="math inline">\(X\)</span>.</p>
+<p><strong>Solution</strong>
+We need to find the probability of each value in the range of <span class="math inline">\(X\)</span>.</p>
+<div id="calculation-1" class="section level4 hasAnchor" number="1.6.2.1">
+<h4><span class="header-section-number">1.6.2.1</span> Calculation:<a href="index.html#calculation-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><span class="math inline">\(P(X = 0)\)</span>: The values 0 occur twice in the outcomes, for outcomes a and b. Since each outcome is equally likely, <span class="math inline">\(P(X = 0) = \frac{2}{6} = \frac{1}{3}\)</span>.</li>
+<li><span class="math inline">\(P(X = 1.5)\)</span>: The values 1.5 occur twice in the outcomes, for outcomes c and d. Hence, <span class="math inline">\(P(X = 1.5) = \frac{2}{6} = \frac{1}{3}\)</span>.</li>
+<li><span class="math inline">\(P(X = 2)\)</span>: The value 2 occurs once in the outcomes, for outcome e. Thus, <span class="math inline">\(P(X = 2) = \frac{1}{6}\)</span>.</li>
+<li><span class="math inline">\(P(X = 3)\)</span>: The value 3 occurs once in the outcomes, for outcome f. Therefore, <span class="math inline">\(P(X = 3) = \frac{1}{6}\)</span>.</li>
+</ul>
+</div>
+<div id="probability-mass-function-pmf-of-x" class="section level4 hasAnchor" number="1.6.2.2">
+<h4><span class="header-section-number">1.6.2.2</span> Probability Mass Function (PMF) of <span class="math inline">\(X\)</span>:<a href="index.html#probability-mass-function-pmf-of-x" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><span class="math inline">\(P(X = 0) = \frac{1}{3}\)</span></li>
+<li><span class="math inline">\(P(X = 1.5) = \frac{1}{3}\)</span></li>
+<li><span class="math inline">\(P(X = 2) = \frac{1}{6}\)</span></li>
+<li><span class="math inline">\(P(X = 3) = \frac{1}{6}\)</span></li>
+</ul>
+<p>The probability mass function of <span class="math inline">\(X\)</span> is given by:
+<span class="math display">\[ P(X = x) = \begin{cases}
+\frac{1}{3} &amp; \text{if } x = 0 \text{ or } x = 1.5 \\
+\frac{1}{6} &amp; \text{if } x = 2 \text{ or } x = 3 \\
+0 &amp; \text{otherwise}
+\end{cases} \]</span></p>
+<p>This PMF describes the probabilities associated with each possible value of the random variable <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="example-3-25" class="section level3 hasAnchor" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Example 3-25<a href="index.html#example-3-25" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An assembly consists of three mechanical components. The probabilities that the first, second, and third components meet specifications are 0.95, 0.98, and 0.99, respectively. Assume that the components are independent. Determine the probability mass function of the number of components in the assembly that meet specifications.</p>
+<div id="solution" class="section level4 hasAnchor" number="1.6.3.1">
+<h4><span class="header-section-number">1.6.3.1</span> Solution:<a href="index.html#solution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s define a random variable <span class="math inline">\(X\)</span> to represent the number of components in the assembly that meet specifications. We can observe that <span class="math inline">\(X\)</span> can take on values from 0 to 3, as there can be zero, one, two, or all three components that meet specifications.</p>
+</div>
+<div id="calculation-2" class="section level4 hasAnchor" number="1.6.3.2">
+<h4><span class="header-section-number">1.6.3.2</span> Calculation:<a href="index.html#calculation-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><span class="math inline">\(P(X = 0)\)</span>: The probability that none of the components meet specifications is calculated by multiplying the probabilities of each component failing to meet specifications: <span class="math inline">\(P(X = 0) = (1 - 0.95) \times (1 - 0.98) \times (1 - 0.99)\)</span>.</li>
+<li><span class="math inline">\(P(X = 1)\)</span>: The probability that exactly one component meets specifications is calculated by considering the probability that one component meets specifications and the other two fail: <span class="math inline">\(P(X = 1) = (0.95) \times (1 - 0.98) \times (1 - 0.99)\)</span>, and so on for <span class="math inline">\(X = 2\)</span> and <span class="math inline">\(X = 3\)</span>.</li>
+</ul>
+</div>
+<div id="probability-mass-function-pmf-of-x-1" class="section level4 hasAnchor" number="1.6.3.3">
+<h4><span class="header-section-number">1.6.3.3</span> Probability Mass Function (PMF) of <span class="math inline">\(X\)</span>:<a href="index.html#probability-mass-function-pmf-of-x-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><span class="math inline">\(P(X = 0) = (1 - 0.95) \times (1 - 0.98) \times (1 - 0.99) = 8 \times 10^{-6}\)</span></li>
+<li><span class="math inline">\(P(X = 1) = (0.95) \times (1 - 0.98) \times (1 - 0.99) + (1 - 0.95) \times (0.98) \times (1 - 0.99) + (1 - 0.95) \times (1 - 0.98) \times (0.99) = 0.0012\)</span></li>
+<li><span class="math inline">\(P(X = 2) = (0.95) \times (0.98) \times (1 - 0.99) + (0.95) \times (1 - 0.98) \times (0.99) + (1 - 0.95) \times (0.98) \times (0.99) = 0.0576\)</span></li>
+<li><span class="math inline">\(P(X = 3) = (0.95) \times (0.98) \times (0.99) = 0.9412\)</span></li>
+</ul>
+<p>Calculating these probabilities will give us the probability mass function of <span class="math inline">\(X\)</span>, representing the likelihood of having 0, 1, 2, or 3 components in the assembly that meet specifications.</p>
+</div>
+</div>
+</div>
+<div id="cumulative-distribution-functions-cdfs" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Cumulative Distribution Functions (CDFs)<a href="index.html#cumulative-distribution-functions-cdfs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In probability theory and statistics, a Cumulative Distribution Function (CDF) is a function that gives the probability that a random variable <span class="math inline">\(X\)</span> will take on a value less than or equal to a given value <span class="math inline">\(x\)</span>. Mathematically, the CDF of a random variable <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(F(x)\)</span>, is defined as:</p>
+<p><span class="math display">\[ F(x) = P(X \leq x) \]</span></p>
+<p>In simpler terms, the CDF at a specific value <span class="math inline">\(x\)</span> tells us the probability that the random variable <span class="math inline">\(X\)</span> will be less than or equal to <span class="math inline">\(x\)</span>. This function provides a comprehensive summary of the distribution of <span class="math inline">\(X\)</span>, capturing both the probability of individual values and cumulative probabilities up to a certain value.</p>
+<div id="properties-of-cdfs" class="section level3 hasAnchor" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> Properties of CDFs:<a href="index.html#properties-of-cdfs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The cumulative distribution function of a discrete random variable X, denoted as <span class="math inline">\(F(x)\)</span>, is
+<span class="math display">\[ F(x) = P(X \le x)=\sum_{x_i \le x}f(x_i) \]</span></p>
+<p>For a discrete random variable X, <span class="math inline">\(F(x)\)</span> satisfies the following properties.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Non-Decreasing</strong>: <span class="math inline">\(F(x) = P(X \le x)=\sum_{x_i \le x}f(x_i)\)</span> meaning as <span class="math inline">\(x\)</span> increases, <span class="math inline">\(F(x)\)</span> does not decrease.</p></li>
+<li><p><strong>Bounded</strong>: <span class="math inline">\(0 \le F(x) \le 1\)</span> The CDF is bounded between 0 and 1, inclusive.</p></li>
+<li><p><strong>Monotonicity</strong>: If <span class="math inline">\(x \le y\)</span>, then <span class="math inline">\(F(x) \le F(y)\)</span>. In other words, the CDF is monotonically non-decreasing.</p></li>
+</ol>
+</div>
+<div id="example" class="section level3 hasAnchor" number="1.7.2">
+<h3><span class="header-section-number">1.7.2</span> Example:<a href="index.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider a random variable <span class="math inline">\(X\)</span> representing the outcome of rolling a fair six-sided die. The CDF of <span class="math inline">\(X\)</span> would be:</p>
+<p><span class="math display">\[ F(x) = \begin{cases}
+0 &amp; \text{if } x &lt; 1 \\
+\frac{1}{6} &amp; \text{if } 1 \leq x &lt; 2 \\
+\frac{2}{6} &amp; \text{if } 2 \leq x &lt; 3 \\
+\frac{3}{6} &amp; \text{if } 3 \leq x &lt; 4 \\
+\frac{4}{6} &amp; \text{if } 4 \leq x &lt; 5 \\
+\frac{5}{6} &amp; \text{if } 5 \leq x &lt; 6 \\
+1 &amp; \text{if } x \geq 6 \\
+\end{cases} \]</span></p>
+<p>This CDF tells us the probability of rolling a number less than or equal to <span class="math inline">\(x\)</span> on a fair six-sided die. For example, <span class="math inline">\(F(3)\)</span> would be <span class="math inline">\(\frac{3}{6} = 0.5\)</span>, indicating a 50% chance of rolling a number less than or equal to 3.</p>
 
+</div>
 </div>
 </div>
             </section>
