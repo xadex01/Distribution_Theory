@@ -208,14 +208,18 @@ So, the constant \( c \) is 3, making the p.m.f. a valid probability mass functi
 
 The sample space of a random experiment is \( S = \{a, b, c, d, e, f\} \),and each outcome is equally likely. A random variable is defined as follows:
 
-| Outcome | \(x\)   |
-|---------|--------|
-| a       |   0    |
-| b       |   0    |
-| c       |  1.5   |
-| d       |  1.5   |
-| e       |   2    |
-| f       |   3    |
+
+\begin{array}
+Outcome & \(x\) \\
+\hline\\
+ a        &  0    \\
+ b       &  0    \\
+ c       &  1.5   \\
+ d       &  1.5   \\
+ e       &   2    \\
+ f       &   3    \\
+ 
+ \end{array}
 
 Determine the probability mass function (PMF) of \( X \). 
 
@@ -284,6 +288,118 @@ For a discrete random variable X, $F(x)$ satisfies the following properties.
 2. **Bounded**: \(0 \le F(x) \le 1\) The CDF is bounded between 0 and 1, inclusive.
 
 3. **Monotonicity**: If \( x \le y \), then \( F(x) \le F(y) \). In other words, the CDF is monotonically non-decreasing.
+
+### Example
+
+Suppose \( x \) is a discrete random variable. Let the probability mass function (pmf) of \( x \) be equal to \( f(x) = \frac{5 - x}{10} \) for \( x = 1, 2, 3, 4 \). Suppose we want to find the cumulative distribution function (cdf) of \( x \), denoted as \( F_X(t) = P(X \leq t) \).
+
+To find the cdf, we need to sum up the probabilities of all possible values of \( x \) less than or equal to \( t \).
+
+For \( t = 1 \):
+\[ F_X(1) = P(X \leq 1) = f(1) = \frac{5 - 1}{10} = \frac{4}{10} = 0.4 \]
+
+For \( t = 2 \):
+\[ F_X(2) = P(X \leq 2) = f(1) + f(2) = \frac{4}{10} + \frac{5 - 2}{10} = \frac{4}{10} + \frac{3}{10} = \frac{7}{10} = 0.7 \]
+
+For \( t = 3 \):
+\[ F_X(3) = P(X \leq 3) = f(1) + f(2) + f(3) = \frac{4}{10} + \frac{3}{10} + \frac{5 - 3}{10} = \frac{4}{10} + \frac{3}{10} + \frac{2}{10} = \frac{9}{10} = 0.9 \]
+
+For \( t = 4 \):
+\[ F_X(4) = P(X \leq 4) = f(1) + f(2) + f(3) + f(4) = \frac{4}{10} + \frac{3}{10} + \frac{2}{10} + \frac{5 - 4}{10} = \frac{4}{10} + \frac{3}{10} + \frac{2}{10} + \frac{1}{10} = 1 \]
+
+So, the cumulative distribution function \( F_X(t) \) for \( x \) is:
+
+\[ F_X(t) = \begin{cases} 
+0 & \text{if } t < 1 \\
+0.4 & \text{if } 1 \leq t < 2 \\
+0.7 & \text{if } 2 \leq t < 3 \\
+0.9 & \text{if } 3 \leq t < 4 \\
+1 & \text{if } t \geq 4 
+\end{cases} \]
+
+It is worth noting that $P(X \le2)$ does not equal $P(X<2)$;$P(X\le 2)=P(X=1, 2)$ and $P(X<2)=P(X=1)$. It is very important for you to carefully read the problems in order to correctly set up the probabilities. You should also look carefully at the notation if a problem provides it.
+
+### Example:
+
+Suppose we have a family with three children. The sample space for this situation is \( \mathbf{S} = \{ BBB, BBG, BGB, GBB, GGG, GGB, GBG, BGG \} \) where \( B = \text{boy} \) and \( G = \text{girl} \). Suppose the probability of having a boy is the same as the probability of having a girl. Let the random variable \( X \) be the number of boys. Then \( X \) will have the following pmf:
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+t & 0 & 1 & 2 & 3 \\
+\hline
+P(X=t) & \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8} \\
+\hline
+\end{array}
+\]
+
+To find the cumulative distribution function (CDF) \( F(t) \), which represents the probability that \( X \) is less than or equal to a given value \( t \), we sum up the probabilities up to \( t \):
+
+For \( t = 0 \): \( F(0) = P(X \leq 0) = P(X = 0) = \frac{1}{8} \)
+
+For \( t = 1 \): \( F(1) = P(X \leq 1) = P(X = 0) + P(X = 1) = \frac{1}{8} + \frac{3}{8} = \frac{4}{8} \)
+
+For \( t = 2 \): \( F(2) = P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2) = \frac{1}{8} + \frac{3}{8} + \frac{3}{8} = \frac{7}{8} \)
+
+For \( t = 3 \): \( F(3) = P(X \leq 3) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3) = \frac{1}{8} + \frac{3}{8} + \frac{3}{8} + \frac{1}{8} = 1 \)
+
+So, the cumulative distribution function \( F(t) \) is:
+
+\[
+\begin{array}{|c|c|}
+\hline
+t & F(t) \\
+\hline
+0 & \frac{1}{8} \\
+1 & \frac{4}{8} \\
+2 & \frac{7}{8} \\
+3 & 1 \\
+\hline
+\end{array}
+\]
+
+
+### Example
+
+Express the following probabilities in terms of the CDF, \( F_X(t) \), if \( X \) is a discrete random variable with support such that \( x \) is any integer from 0 to \( b \) and \( 0 \leq a \leq b \):
+
+a. \( P(X \leq a) \)
+
+This represents the cumulative probability up to \( a \). It can be calculated using the CDF:
+\[ P(X \leq a) = F_X(a) \]
+
+b. \( f_X(a) = P(X = a) \), where \( f_X(x) \) is the PMF of \( x \)
+
+This represents the probability of the specific value \( a \). It can be directly obtained from the PMF:
+\[ P(X=a)=P(X\le a)-P(X\le a-1)=F_X(a)-F_X(a-1) \]
+
+c. \( P(X < a) \)
+
+This represents the cumulative probability up to \( a - 1 \). It can be calculated using the CDF:
+\[ P(X<a)=P(X\le a)-P(X=a)=P(X\le a-1)=F_X(a-1) \]
+
+d. \( P(X \geq a) \)
+
+This represents the probability from \( a \) up to the maximum value in the support. It can be calculated using the complement of the cumulative probability up to \( a - 1 \):
+\[ P(X\ge a)=1-P(X\le a-1)=1-F_X(a-1) \]
+
+### Example
+
+Let \( X \) have distribution function \( F \). What is the distribution function and expectation of \( \frac{X - \mu}{\sigma} \)? In other words, find the distribution function in terms of \( F_X \) and the expectation in terms of \( E(X) \).
+
+To find the distribution function of \( \frac{X - \mu}{\sigma} \), where \( \mu \) is the mean of \( X \) and \( \sigma \) is the standard deviation of \( X \), we need to first find the distribution function \( F_{\frac{X - \mu}{\sigma}}(x) \). This can be done using the transformation formula for distribution functions:
+
+\[ F_{\frac{X - \mu}{\sigma}}(x) = P\left(\frac{X - \mu}{\sigma} \leq x\right) = F_X(\mu + \sigma x) \]
+
+So, the distribution function of \( \frac{X - \mu}{\sigma} \) in terms of \( F_X \) is \( F_{\frac{X - \mu}{\sigma}}(x) = F_X(\mu + \sigma x) \).
+
+To find the expectation of \( \frac{X - \mu}{\sigma} \), we use the properties of expectation:
+
+\[ E\left(\frac{X - \mu}{\sigma}\right) = \frac{1}{\sigma}E(X - \mu) = \frac{1}{\sigma}(E(X) - \mu) \]
+
+So, the expectation of \( \frac{X - \mu}{\sigma} \) in terms of \( E(X) \) is \( E\left(\frac{X - \mu}{\sigma}\right) = \frac{1}{\sigma}(E(X) - \mu) \).
+
+
 
 ### Example:
 Consider a random variable \( X \) representing the outcome of rolling a fair six-sided die. The CDF of \( X \) would be:

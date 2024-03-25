@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 The Binomial Distribution | Distribution Theory</title>
+  <meta name="description" content="Chapter 2 The Binomial Distribution | Distribution Theory" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 The Binomial Distribution | Distribution Theory" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 The Binomial Distribution | Distribution Theory" />
+  
+  
+  
+
+<meta name="author" content="AbdulHafiz Abba" />
+
+
+<meta name="date" content="2024-03-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="discrete-uniform-distribution.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Distribution Theory</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Distribution Functions, Probability Densities, and Standard Distribution Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#distribution-functions"><i class="fa fa-check"></i><b>1.1</b> Distribution Functions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#probability-densities-and-their-relations"><i class="fa fa-check"></i><b>1.2</b> Probability Densities and their Relations</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#standard-distribution-functions"><i class="fa fa-check"></i><b>1.3</b> Standard Distribution Functions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#discrete-random-variables"><i class="fa fa-check"></i><b>1.4</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#example-1-voice-communication-system"><i class="fa fa-check"></i><b>1.4.1</b> Example 1: Voice Communication System</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#example-2-selecting-fans-at-a-football-game"><i class="fa fa-check"></i><b>1.4.2</b> Example 2: Selecting Fans at a Football Game</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#notes"><i class="fa fa-check"></i><b>1.4.3</b> Notes:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#probability-distributions-and-probability-mass-functions"><i class="fa fa-check"></i><b>1.5</b> Probability Distributions and Probability Mass Functions</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#what-is-a-probability-distribution"><i class="fa fa-check"></i><b>1.5.1</b> What is a Probability Distribution?</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#what-is-a-probability-mass-function-pmf"><i class="fa fa-check"></i><b>1.5.2</b> What is a Probability Mass Function (PMF)?</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#how-do-they-help"><i class="fa fa-check"></i><b>1.5.3</b> How Do They Help?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example"><i class="fa fa-check"></i><b>1.6.1</b> Example</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#example-1"><i class="fa fa-check"></i><b>1.6.2</b> Example:</a></li>
+<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#example-2"><i class="fa fa-check"></i><b>1.6.3</b> Example</a></li>
+<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#example-3-13-determining-the-probability-mass-function-of-a-random-variable"><i class="fa fa-check"></i><b>1.6.4</b> Example 3-13: Determining the Probability Mass Function of a Random Variable</a></li>
+<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#example-3-25"><i class="fa fa-check"></i><b>1.6.5</b> Example 3-25</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#cumulative-distribution-functions-cdfs"><i class="fa fa-check"></i><b>1.7</b> Cumulative Distribution Functions (CDFs)</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#properties-of-cdfs"><i class="fa fa-check"></i><b>1.7.1</b> Properties of CDFs:</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#example-3"><i class="fa fa-check"></i><b>1.7.2</b> Example</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#example-4"><i class="fa fa-check"></i><b>1.7.3</b> Example:</a></li>
+<li class="chapter" data-level="1.7.4" data-path="index.html"><a href="index.html#example-5"><i class="fa fa-check"></i><b>1.7.4</b> Example</a></li>
+<li class="chapter" data-level="1.7.5" data-path="index.html"><a href="index.html#example-6"><i class="fa fa-check"></i><b>1.7.5</b> Example</a></li>
+<li class="chapter" data-level="1.7.6" data-path="index.html"><a href="index.html#example-7"><i class="fa fa-check"></i><b>1.7.6</b> Example:</a></li>
+<li class="chapter" data-level="1.7.7" data-path="index.html"><a href="index.html#example-8"><i class="fa fa-check"></i><b>1.7.7</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html"><i class="fa fa-check"></i><b>2</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#the-probability-mass-function"><i class="fa fa-check"></i><b>2.1</b> The Probability Mass Function</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-9"><i class="fa fa-check"></i><b>2.1.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable"><i class="fa fa-check"></i><b>2.2</b> Binomial Random Variable</a></li>
+<li class="chapter" data-level="2.3" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable-1"><i class="fa fa-check"></i><b>2.3</b> Binomial Random Variable</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-10"><i class="fa fa-check"></i><b>2.3.1</b> Example</a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-11"><i class="fa fa-check"></i><b>2.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-binomial-probabilities"><i class="fa fa-check"></i><b>2.4</b> Cumulative Binomial Probabilities</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-12"><i class="fa fa-check"></i><b>2.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-probability-distributions"><i class="fa fa-check"></i><b>2.5</b> Cumulative Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-13"><i class="fa fa-check"></i><b>2.5.1</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html"><i class="fa fa-check"></i><b>3</b> Discrete Uniform Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#mathematical-definition"><i class="fa fa-check"></i><b>3.1</b> Mathematical Definition</a></li>
+<li class="chapter" data-level="3.2" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#social-worked-examples"><i class="fa fa-check"></i><b>3.2</b> Social Worked Examples</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-1-rolling-a-fair-six-sided-die"><i class="fa fa-check"></i><b>3.2.1</b> Example 1: Rolling a Fair Six-Sided Die</a></li>
+<li class="chapter" data-level="3.2.2" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-2-selecting-a-random-card-from-a-standard-deck"><i class="fa fa-check"></i><b>3.2.2</b> Example 2: Selecting a Random Card from a Standard Deck</a></li>
+<li class="chapter" data-level="3.2.3" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-3-random-number-generator"><i class="fa fa-check"></i><b>3.2.3</b> Example 3: Random Number Generator</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#conclusion"><i class="fa fa-check"></i><b>3.3</b> Conclusion</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distribution Theory</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-binomial-distribution" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> The Binomial Distribution<a href="the-binomial-distribution.html#the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-probability-mass-function" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> The Probability Mass Function<a href="the-binomial-distribution.html#the-probability-mass-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-9" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Example<a href="the-binomial-distribution.html#example-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We previously looked at an example in which three fans were randomly selected at a football game in which Bauchi State University, Gadau (BASUG) is playing Abubakar Tafawa Balewa University (ATBU). Each fan was identified as either a BASUG fan (B) or an ATBU fan (A), yielding the following sample space:
+<span class="math display">\[ S = \{BBB, BBA, BAB, ABB, AAB, ABA, BAA, AAA\} \]</span></p>
+<p>We let <span class="math inline">\(X\)</span> equal the number of BASUG fans selected. The possible values of <span class="math inline">\(X\)</span> were, therefore, either 0, 1, 2, or 3. Now, we could find probabilities of individual events, <span class="math inline">\(P(BBB)\)</span> or <span class="math inline">\(P(BBA)\)</span>, for example. Alternatively, we could find <span class="math inline">\(P(X=x)\)</span>, the probability that <span class="math inline">\(X\)</span> takes on a particular value <span class="math inline">\(x\)</span>. Let’s do that (again)! This time though we will be less interested in obtaining the actual probabilities as we will be in looking for a pattern in our calculations so that we can derive a formula for calculating similar probabilities.</p>
+<p>To solve the problem again, we need to recalculate the probabilities based on the provided expression:</p>
+<p><span class="math display">\[ P(X = 0) = P(NNN) = 0.2 \times 0.2 \times 0.2 \]</span></p>
+<p><span class="math display">\[ = 1 \times (0.8)^0 \times (0.2)^3 \]</span></p>
+<p>Given the expression, we can see that <span class="math inline">\(P(X = 0)\)</span> is simply equal to <span class="math inline">\((0.8)^0 \times (0.2)^3\)</span>.</p>
+<p><span class="math display">\[ P(X = 0) = (0.8)^0 \times (0.2)^3 \]</span>
+<span class="math display">\[ = 1 \times 0.008 \]</span>
+<span class="math display">\[ = 0.008 \]</span></p>
+<p>Similarly, for <span class="math inline">\(P(X = 1)\)</span>, <span class="math inline">\(P(X = 2)\)</span>, and <span class="math inline">\(P(X = 3)\)</span>, we have:</p>
+<p><span class="math display">\[ P(X = 1) = P(NBB) + P(BNB) + P(BBN) \]</span>
+<span class="math display">\[ = 3 \times (0.8)^1 \times (0.2)^2 \]</span>
+<span class="math display">\[ = 3 \times 0.8 \times 0.04 \]</span>
+<span class="math display">\[ = 0.24 \]</span></p>
+<p><span class="math display">\[ P(X = 2) = P(BBN) + P(BNB) + P(NBB) \]</span>
+<span class="math display">\[ = 3 \times (0.8)^2 \times (0.2)^1 \]</span>
+<span class="math display">\[ = 3 \times 0.64 \times 0.2 \]</span>
+<span class="math display">\[ = 0.384 \]</span></p>
+<p><span class="math display">\[ P(X = 3) = P(BBB) \]</span>
+<span class="math display">\[ = (0.8)^3 \times (0.2)^0 \]</span>
+<span class="math display">\[ = 0.512 \]</span></p>
+<p>Therefore, the updated probability mass function <span class="math inline">\(P(X = x)\)</span> is:</p>
+<p><span class="math display">\[ P(X = 0) = 0.008 \]</span>
+<span class="math display">\[ P(X = 1) = 0.24 \]</span>
+<span class="math display">\[ P(X = 2) = 0.384 \]</span>
+<span class="math display">\[ P(X = 3) = 0.512 \]</span></p>
+<p>Do you see a pattern in our calculations? It seems that, in each case, we multiply the number of ways of obtaining <span class="math inline">\(x\)</span> BASUG fans first by the probability of <span class="math inline">\(x\)</span> BASUG fans <span class="math inline">\((0.8)^x\)</span> and then by the probability of ATBU fans <span class="math inline">\((0.2)^{3-x}\)</span>.</p>
+<p>This example lends itself to the creation of a general formula for the probability mass function of a binomial random variable X.</p>
+</div>
+</div>
+<div id="binomial-random-variable" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Binomial Random Variable<a href="the-binomial-distribution.html#binomial-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The probability mass function of a binomial random variable <span class="math inline">\(X\)</span> is:</p>
+<p><span class="math display">\[f(x)=\dbinom{n}{x} p^x (1-p)^{n-x}\]</span></p>
+<p>We denote the <strong>binomial distribution</strong> as <span class="math inline">\(b(n,p)\)</span>. That is, we say:</p>
+<p><span class="math display">\[X\sim b(n, p)\]</span></p>
+<p>where the tilde <span class="math inline">\((\sim)\)</span> is read “as distributed as,” and <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> are called parameters of the distribution.</p>
+</div>
+<div id="binomial-random-variable-1" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Binomial Random Variable<a href="the-binomial-distribution.html#binomial-random-variable-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A discrete random variable X is a binomial random variable if:</p>
+<ul>
+<li>An experiment, or trial, is performed in exactly the same way <span class="math inline">\(n\)</span> times.</li>
+<li>Each of the <span class="math inline">\(n\)</span> trials has only two possible outcomes. One of the outcomes is called a “success,” while the other is called a “failure.” Such a trial is called a <strong>Bernoulli trial</strong>.</li>
+<li>The <span class="math inline">\(n\)</span> trials are independent.</li>
+<li>The probability of success, denoted <span class="math inline">\(p\)</span>, is the same for each trial. The probability of failure is <span class="math inline">\(q=1-p\)</span>.</li>
+<li>The random variable X = the number of successes in the <span class="math inline">\(n\)</span> trials.</li>
+</ul>
+<div id="example-10" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Example<a href="the-binomial-distribution.html#example-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A coin is weighted in such a way so that there is a 70% chance of getting a head on any particular toss. Toss the coin, in exactly the same way, 100 times. Let X equal the number of heads tossed. Is X a binomial random variable?</p>
+<p><strong>Answer</strong>
+Yes, X is a binomial random variable, because:</p>
+<ol style="list-style-type: decimal">
+<li>The coin is tossed in exactly the same way 100 times.</li>
+<li>Each toss results in either a head (success) or a tail (failure).</li>
+<li>One toss doesn’t affect the outcome of another toss. The trials are independent.</li>
+<li>The probability of getting a head is 0.70 for each toss of the coin.</li>
+<li>X equals the number of heads (successes).</li>
+</ol>
+</div>
+<div id="example-11" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Example<a href="the-binomial-distribution.html#example-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A college administrator randomly samples students until he finds four that have volunteered to work for a local organization. Let X equal the number of students sampled. Is X a binomial random variable?</p>
+<p><strong>Answer</strong>
+No, X is not a binomial random variable, because the number of trials
+was not fixed in advance, and <span class="math inline">\(n\)</span> does not equal the number of volunteers in the sample.</p>
+</div>
+</div>
+<div id="cumulative-binomial-probabilities" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Cumulative Binomial Probabilities<a href="the-binomial-distribution.html#cumulative-binomial-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-12" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Example<a href="the-binomial-distribution.html#example-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By some estimates, twenty-percent (20%) of Americans have no health insurance. Randomly sample <span class="math inline">\(n=15\)</span> Americans. Let X denote the number in the sample with no health insurance. a) What is the probability that exactly 3 of the 15 sampled have no health insurance?</p>
+<p><strong>Solution</strong></p>
+<p>To solve this problem, we’ll use the binomial probability formula:</p>
+<p><span class="math display">\[ P(X = k) = \binom{n}{k} \times p^k \times (1 - p)^{n - k} \]</span></p>
+<p>where:
+- <span class="math inline">\(n\)</span> is the total number of trials (sample size)
+- <span class="math inline">\(k\)</span> is the number of successes (number of Americans with no health insurance)
+- <span class="math inline">\(p\)</span> is the probability of success (proportion of Americans with no health insurance)
+- <span class="math inline">\((1 - p)\)</span> is the probability of failure (proportion of Americans with health insurance)</p>
+<p>Given:
+- <span class="math inline">\(n = 15\)</span>
+- <span class="math inline">\(k = 3\)</span>
+- <span class="math inline">\(p = 0.20\)</span> (probability of an American having no health insurance)</p>
+<p>Substituting these values into the formula:</p>
+<p><span class="math display">\[ P(X = 3) = \binom{15}{3} \times 0.20^3 \times 0.80^{15 - 3} \]</span></p>
+<p>Using the binomial coefficient formula:</p>
+<p><span class="math display">\[ \binom{15}{3} = \frac{15!}{3!(15-3)!} = \frac{15 \times 14 \times 13}{3 \times 2 \times 1} = 455 \]</span></p>
+<p>Now, plugging in the values:</p>
+<p><span class="math display">\[ P(X = 3) = 455 \times 0.20^3 \times 0.80^{12} \]</span></p>
+<p><span class="math display">\[ P(X = 3) = 455 \times 0.008 \times 0.0687 \]</span></p>
+<p><span class="math display">\[ P(X = 3) = 2.3736 \]</span></p>
+<p>Therefore, the probability that exactly 3 of the 15 sampled Americans have no health insurance is approximately <span class="math inline">\(2.3736\)</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability that at most one of those sampled has no health insurance?</li>
+</ol>
+<p><strong>Solution</strong>
+To find the probability that at most one of those sampled has no health insurance, we need to find the probabilities for <span class="math inline">\(X = 0\)</span> and <span class="math inline">\(X = 1\)</span>, and then sum them up.</p>
+<p>Given:
+- <span class="math inline">\(n = 15\)</span>
+- <span class="math inline">\(p = 0.20\)</span></p>
+<p>Using the binomial probability formula:</p>
+<p><span class="math display">\[ P(X = k) = \binom{n}{k} \times p^k \times (1 - p)^{n - k} \]</span></p>
+<p>where:
+- <span class="math inline">\(n\)</span> is the total number of trials (sample size)
+- <span class="math inline">\(k\)</span> is the number of successes (number of Americans with no health insurance)
+- <span class="math inline">\(p\)</span> is the probability of success (proportion of Americans with no health insurance)
+- <span class="math inline">\((1 - p)\)</span> is the probability of failure (proportion of Americans with health insurance)</p>
+<ol style="list-style-type: decimal">
+<li><p>For <span class="math inline">\(X = 0\)</span>:
+<span class="math display">\[ P(X = 0) = \binom{15}{0} \times 0.20^0 \times 0.80^{15} \]</span>
+<span class="math display">\[ P(X = 0) = 1 \times 1 \times 0.80^{15} \]</span>
+<span class="math display">\[ P(X = 0) \approx 0.0352 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 1\)</span>:
+<span class="math display">\[ P(X = 1) = \binom{15}{1} \times 0.20^1 \times 0.80^{14} \]</span>
+<span class="math display">\[ P(X = 1) = 15 \times 0.20 \times 0.80^{14} \]</span>
+<span class="math display">\[ P(X = 1) \approx 0.1319 \]</span></p></li>
+</ol>
+<p>Now, let’s sum up these probabilities to find <span class="math inline">\(P(X \leq 1)\)</span>:</p>
+<p><span class="math display">\[ P(X \leq 1) = P(X = 0) + P(X = 1) \]</span>
+<span class="math display">\[ P(X \leq 1) = 0.0352 + 0.1319 \]</span>
+<span class="math display">\[ P(X \leq 1) = 0.167 \]</span></p>
+<p>Therefore, the probability that at most one of those sampled has no health insurance is approximately <span class="math inline">\(0.167\)</span>.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the probability that more than seven have no health insurance?</li>
+</ol>
+<p><strong>Solution</strong></p>
+<p>To find the probability that more than seven people have no health insurance, we need to find the probabilities for <span class="math inline">\(X &gt; 7\)</span>.</p>
+<p>Given:</p>
+<ul>
+<li><span class="math inline">\(n = 15\)</span></li>
+<li><span class="math inline">\(p = 0.20\)</span></li>
+</ul>
+<p>Using the binomial probability formula:</p>
+<p><span class="math display">\[ P(X &gt; 7) = 1 - P(X \leq 7) \]</span></p>
+<p>Now, let’s calculate <span class="math inline">\(P(X \leq 7)\)</span> and subtract it from 1 to find <span class="math inline">\(P(X &gt; 7)\)</span>.</p>
+<p>We’ll sum up the probabilities for <span class="math inline">\(X = 0\)</span> through <span class="math inline">\(X = 7\)</span> to find <span class="math inline">\(P(X \leq 7)\)</span>, and then subtract that value from 1.</p>
+<p>Let’s calculate the probabilities for <span class="math inline">\(X = 0\)</span> through <span class="math inline">\(X = 7\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><p>For <span class="math inline">\(X = 0\)</span>:
+<span class="math display">\[ P(X = 0) = \binom{15}{0} \times 0.20^0 \times 0.80^{15} \]</span>
+<span class="math display">\[ P(X = 0) \approx 0.0352 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 1\)</span>:
+<span class="math display">\[ P(X = 1) = \binom{15}{1} \times 0.20^1 \times 0.80^{14} \]</span>
+<span class="math display">\[ P(X = 1) \approx 0.1318 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 2\)</span>:
+<span class="math display">\[ P(X = 2) = \binom{15}{2} \times 0.20^2 \times 0.80^{13} \]</span>
+<span class="math display">\[ P(X = 2) \approx 0.2333 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 3\)</span>:
+<span class="math display">\[ P(X = 3) = \binom{15}{3} \times 0.20^3 \times 0.80^{12} \]</span>
+<span class="math display">\[ P(X = 3) \approx 0.2668 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 4\)</span>:
+<span class="math display">\[ P(X = 4) = \binom{15}{4} \times 0.20^4 \times 0.80^{11} \]</span>
+<span class="math display">\[ P(X = 4) \approx 0.2001 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 5\)</span>:
+<span class="math display">\[ P(X = 5) = \binom{15}{5} \times 0.20^5 \times 0.80^{10} \]</span>
+<span class="math display">\[ P(X = 5) \approx 0.1001 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 6\)</span>:
+<span class="math display">\[ P(X = 6) = \binom{15}{6} \times 0.20^6 \times 0.80^9 \]</span>
+<span class="math display">\[ P(X = 6) \approx 0.0369 \]</span></p></li>
+<li><p>For <span class="math inline">\(X = 7\)</span>:
+<span class="math display">\[ P(X = 7) = \binom{15}{7} \times 0.20^7 \times 0.80^8 \]</span>
+<span class="math display">\[ P(X = 7) \approx 0.0107 \]</span></p></li>
+</ol>
+<p>Now, let’s sum up these probabilities to find <span class="math inline">\(P(X \leq 7)\)</span>:</p>
+<p><span class="math display">\[ P(X \leq 7) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4) + P(X = 5) + P(X = 6) + P(X = 7) \]</span></p>
+<p><span class="math display">\[ P(X \leq 7) \approx 0.9149 \]</span></p>
+<p>Therefore, the probability that more than seven people have no health insurance is:</p>
+<p><span class="math display">\[ P(X &gt; 7) = 1 - P(X \leq 7) \]</span>
+<span class="math display">\[ P(X &gt; 7) = 1 - 0.9149 \]</span>
+<span class="math display">\[ P(X &gt; 7) \approx 0.0851 \]</span></p>
+<p>So, the probability that more than seven of the sampled individuals have no health insurance is approximately <span class="math inline">\(0.0851\)</span>.</p>
+</div>
+</div>
+<div id="cumulative-probability-distributions" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Cumulative Probability Distributions<a href="the-binomial-distribution.html#cumulative-probability-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-13" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Example<a href="the-binomial-distribution.html#example-13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Again, by some estimates, twenty-percent (20%) of Americans have no health insurance. Randomly sample <span class="math inline">\(n=15\)</span> Americans. Let <span class="math inline">\(X\)</span> denote the number in the sample with no health insurance. Use the cumulative binomial probability table in the back of your book to find the probability that at most 1 of the 15 sampled has no health insurance.</p>
+<p><strong>Solution</strong></p>
+<p>To find the probability that at most 1 out of the 15 sampled individuals has no health insurance, we can use the cumulative binomial probability table. Given that the probability of an American having no health insurance is 20%, we have <span class="math inline">\(p=0.20\)</span>.</p>
+<p>From the cumulative binomial probability table, we look for the probability of <span class="math inline">\(X \le1\)</span> for <span class="math inline">\(n=15\)</span> and <span class="math inline">\(p=0.20\)</span>. This represents the probability that at most 1 out of the 15 sampled individuals has no health insurance.</p>
+<p><img src="images/image1.png" /></p>
+<p>Using the cumulative binomial probability table, we find:
+<span class="math display">\[P(X\le1 =0.1671\]</span></p>
+<p>Therefore, the probability that at most 1 out of the 15 sampled individuals has no health insurance is approximately 0.1671.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discrete-uniform-distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/xadex01/Distribution_Theory/edit/main/Chapter-2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/xadex01/Distribution_Theory/blob/main/Chapter-2.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
