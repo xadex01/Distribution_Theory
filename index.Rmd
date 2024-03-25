@@ -61,24 +61,41 @@ In many real-world scenarios, we encounter random experiments and variables whos
 Consider a voice communication system with 48 external lines. Let's define a random variable \( X \) representing the number of lines in use at a given time. \( X \) can take integer values from 0 to 48. For instance, if 10 lines are in use, \( x = 10 \).
 
 
-### Example 2: Customer Arrivals at a Store
+### Example 2: Selecting Fans at a Football Game
 
-Consider a retail store where customers arrive randomly throughout the day. Let \( X \) represent the number of customers arriving in the next hour. \( X \) can take non-negative integer values, indicating the count of arrivals. For instance, \( X = 5 \) means that five customers arrive in the next hour.
+Suppose we randomly select three fans at a football game between Bauchi State University, Gadau (BASUG) and Abubakar Tafawa Balewa University (ATBU). We want to identify whether each fan is a BASUG fan (\( B \)) or an ATBU fan (\( A \)). This experiment yields the following sample space:
 
-### Example 3: Defective Products in Manufacturing
+\[ S = \{(B, B, B), (B, B, A), (B, A, B), (B, A, A), (A, B, B), (A, B, A), (A, A, B), (A, A, A)\} \]
 
-In a manufacturing facility, products undergo quality control inspections. Let \( X \) be the number of defective products found in a batch of 100 items. \( X \) can range from 0 to 100, representing the count of defective items. For example, if \( X = 10 \), it means that 10 out of 100 items are defective.
+Let \( X \) be the number of BASUG fans selected. The possible values of \( X \) are 0, 1, 2, or 3. Now, let's find the probability that \( X \) takes on a particular value.
 
-### Example 4: Number of Accidents on a Highway
+Suppose that 70% of the fans are BASUG fans (\( B \)), while 30% are ATBU fans (\( A \)). That is, \( P(B) = 0.7 \) and \( P(A) = 0.3 \). Then, by independence:
 
-Consider a stretch of highway where accidents occur randomly over time. Let \( X \) denote the number of accidents that happen in a day. \( X \) is a discrete random variable, taking non-negative integer values. If \( X = 2 \), it indicates that two accidents occurred during the day.
+\[ P(X = 0) = P(AAA) = 0.3 \times 0.3 \times 0.3 = 0.027 \]
 
-### Example 5: Flaws in a Software Program
+And, by independence and mutual exclusivity:
 
-In software development, defects or flaws are inevitable. Let \( X \) represent the number of bugs found in a new software release during the first week of testing. \( X \) can vary from 0 to a potentially large number, indicating the count of defects discovered. For instance, \( X \)
+\[ P(X = 1) = P(BAA) + P(ABA) + P(AAB) = 0.7 \times 0.3 \times 0.3 + 0.3 \times 0.7 \times 0.3 + 0.3 \times 0.3 \times 0.7 = 0.189 \]
+
+Likewise:
+
+\[ P(X = 2) = 0.7 \times 0.7 \times 0.3 + 0.7 \times 0.3 \times 0.7 + 0.3 \times 0.7 \times 0.7 = 0.441 \]
+
+\[ P(X = 3) = 0.7 \times 0.7 \times 0.7 = 0.343 \]
+
+Finally, by independence:
+
+\[ P(X \leq 3) = 1 \]
+
+### Notes:
+
+- The results make sense, as it's more likely to select 2 or 3 BASUG fans given that 70% of the fans are from BASUG.
+- The probabilities behave well, as they are all greater than 0 and the probability of the entire sample space is 1.
+- The variable \( X \), which represents the number of BASUG fans selected, is called a random variable.
 
 
-## Understanding Probability Distributions and Probability Mass Functions
+
+## Probability Distributions and Probability Mass Functions
 
 Probability distributions and probability mass functions (PMFs) are concepts used to describe the likelihood of different outcomes in a random process. Let's break down these ideas in simpler terms:
 
@@ -109,25 +126,83 @@ f(x_i) = P(X=x_i)
 \sum_{i}^{n} f(x_i) = 1
 \): The sum of probabilities for all possible values \( x_i \) equals 1, denoted as:
 
-### Example: Probability Distribution of Admissions at State University Gadau
+### Example
 
-Let's consider State University Gadau as a case study to determine the probability distribution of admissions. We define a random variable \( X \) to represent the number of applicants admitted to the university. Assume that the probability of admission for each applicant is 0.3, and admissions are independent of each other. Our goal is to determine the probability distribution of \( X \).
+Let \( X \) equal the number of siblings of BASUG students. The support of \( X \) is, of course, 0, 1, 2, 3, ... Because the support contains a countably infinite number of possible values, \( X \) is a discrete random variable with a probability mass function. Find \( P(X = x) \), the probability mass function of \( X \), for all \( x \) in the support.
 
-#### Special Cases:
-- If the first applicant is admitted, then \( X = 1 \).
-- If the first applicant is rejected but the second is admitted, then \( X = 2 \).
-- This pattern continues for subsequent applicants.
+To find the probability mass function \( P(X = x) \), we need to consider the probability of having \( x \) siblings for each possible value of \( x \) in the support.
 
-#### Probability Distribution:
-The probability of admitting the \( k \)th applicant is \( (1 - 0.3)^{k - 1} \times 0.3 \).
-- We use the formula \( P(X = k) = (1 - p)^{k - 1} \times p \) to describe the probabilities associated with \( X \).
-- This formula represents a geometric random variable, where \( p \) is the probability of success (admission) in each trial.
+To solve the example using the provided distribution:
 
-#### Calculation:
-Let's calculate the probability of admission for the first few applicants:
-- For \( X = 1 \): \( P(X = 1) = (1 - 0.3)^{0} \times 0.3 = 0.3 \).
-- For \( X = 2 \): \( P(X = 2) = (1 - 0.3)^{1} \times 0.3 = 0.21 \).
-- Similarly, we can calculate for \( X = 3, 4, \ldots \).
+\begin{array}
+&  x  &  P(X = x)  \\
+\hline\\
+   0    &     0.41      \\
+   1    &     0.45      \\
+   2    &     0.11      \\
+   3    &     0.03      \\
+  \hline\\
+\end{array}
+
+
+The probability mass function \( P(X = x) \) is directly provided in the distribution.
+
+
+### Example: 
+
+Let \( f(x) = cx^2 \) for \( x = 1, 2, 3 \). Determine the constant \( c \) so that the function \( f(x) \) satisfies the conditions of being a probability mass function.
+
+To be a probability mass function, \( f(x) \) must satisfy two conditions:
+
+1. \( f(x) \geq 0 \) for all \( x \).
+2. \( \sum_{\text{all } x} f(x) = 1 \).
+
+Given that \( x \) takes on values 1, 2, and 3, we can write the equation for condition 2:
+
+\[ \sum_{x=1}^{3} cx^2 = 1 \]
+
+Substituting the values of \( x \):
+
+\[ c(1^2) + c(2^2) + c(3^2) = 1 \]
+
+\[ c(1) + c(4) + c(9) = 1 \]
+
+\[ c + 4c + 9c = 1 \]
+
+\[ 14c = 1 \]
+
+\[ c = \frac{1}{14} \]
+
+So, the constant \( c \) is \( \frac{1}{14} \).
+
+
+### Example
+
+Determine the constant \( c \) so that the following p.m.f. of the random variable \( Y \) is a valid probability mass function:
+
+\[ f(y) = c\left(\frac{1}{4}\right)^y \text{ for } y = 1, 2, 3, \ldots \]
+
+To be a valid probability mass function, \( f(y) \) must satisfy two conditions:
+
+1. \( f(y) \geq 0 \) for all \( y \).
+2. \( \sum_{\text{all } y} f(y) = 1 \).
+
+Given that \( y \) takes on values 1, 2, 3, ..., we can write the equation for condition 2:
+
+\[ \sum_{y=1}^{\infty} c\left(\frac{1}{4}\right)^y = 1 \]
+
+Using the formula for the sum of an infinite geometric series:
+
+\[ \frac{c \left(\frac{1}{4}\right)}{1 - \frac{1}{4}} = 1 \]
+
+\[ \frac{c \left(\frac{1}{4}\right)}{\frac{3}{4}} = 1 \]
+
+\[ \frac{c}{3} = 1 \]
+
+\[ c = 3 \]
+
+So, the constant \( c \) is 3, making the p.m.f. a valid probability mass function.
+
 
 ### Example 3-13: Determining the Probability Mass Function of a Random Variable
 
@@ -224,5 +299,56 @@ Consider a random variable \( X \) representing the outcome of rolling a fair si
 \end{cases} \]
 
 This CDF tells us the probability of rolling a number less than or equal to \( x \) on a fair six-sided die. For example, \( F(3) \) would be \( \frac{3}{6} = 0.5 \), indicating a 50% chance of rolling a number less than or equal to 3.
+
+
+### Example
+
+Let's consider a scenario where we want to determine the cumulative distribution function (CDF) for the number of hours volunteered by individuals at a community center. The random variable \( X \) represents the number of hours volunteered.
+
+#### Step 1: Data Collection
+We collect data on the number of hours volunteered by ten individuals at the community center:
+
+| Individual | Hours Volunteered |
+|------------|-------------------|
+| 1          | 2                 |
+| 2          | 4                 |
+| 3          | 3                 |
+| 4          | 5                 |
+| 5          | 1                 |
+| 6          | 6                 |
+| 7          | 3                 |
+| 8          | 2                 |
+| 9          | 4                 |
+| 10         | 5                 |
+
+**Step 2: Sorting and Calculation**
+
+1. Sort the data in ascending order:
+   \( X = \{1, 2, 2, 3, 3, 4, 4, 5, 5, 6\} \)
+
+2. Calculate the cumulative frequencies:
+   - For \( x = 1 \), \( F(1) = 1/10 \)
+   - For \( x = 2 \), \( F(2) = 3/10 \)
+   - For \( x = 3 \), \( F(3) = 5/10 \)
+   - For \( x = 4 \), \( F(4) = 7/10 \)
+   - For \( x = 5 \), \( F(5) = 9/10 \)
+   - For \( x = 6 \), \( F(6) = 10/10 = 1 \)
+
+#### Step 3: Plotting the CDF
+
+
+Here's the plot of the cumulative distribution function (CDF) for the number of hours volunteered at the community center:
+
+```{r echo=FALSE}
+# Define the cumulative frequencies
+hours <- c(1, 2, 2, 3, 3, 4, 4, 5, 5, 6)
+cdf <- cumsum(table(hours)) / length(hours)
+
+# Plot the CDF
+plot(unique(hours), cdf, type = "s", ylim = c(0, 1), xlab = "Number of Hours Volunteered", ylab = "Cumulative Probability", main = "CDF of Hours Volunteered")
+```
+
+We plot the CDF using the cumulative frequencies obtained in Step 2. This graph visually represents the probability that the number of hours volunteered is less than or equal to a given value.
+
 
 
