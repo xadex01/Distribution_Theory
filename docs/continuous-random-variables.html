@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Continuous Random Variables | Distribution Theory</title>
+  <meta name="description" content="Chapter 4 Continuous Random Variables | Distribution Theory" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Continuous Random Variables | Distribution Theory" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Continuous Random Variables | Distribution Theory" />
+  
+  
+  
+
+<meta name="author" content="AbdulHafiz Abba" />
+
+
+<meta name="date" content="2024-03-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-poisson-distribution.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Distribution Theory</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Distribution Functions, Probability Densities, and Standard Distribution Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#distribution-functions"><i class="fa fa-check"></i><b>1.1</b> Distribution Functions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#probability-densities-and-their-relations"><i class="fa fa-check"></i><b>1.2</b> Probability Densities and their Relations</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#standard-distribution-functions"><i class="fa fa-check"></i><b>1.3</b> Standard Distribution Functions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#discrete-random-variables"><i class="fa fa-check"></i><b>1.4</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#example-1-selecting-fans-at-a-football-game"><i class="fa fa-check"></i><b>1.4.1</b> Example 1: Selecting Fans at a Football Game</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#notes"><i class="fa fa-check"></i><b>1.4.2</b> Notes:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#probability-distributions-and-probability-mass-functions"><i class="fa fa-check"></i><b>1.5</b> Probability Distributions and Probability Mass Functions</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#what-is-a-probability-distribution"><i class="fa fa-check"></i><b>1.5.1</b> What is a Probability Distribution?</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#what-is-a-probability-mass-function-pmf"><i class="fa fa-check"></i><b>1.5.2</b> What is a Probability Mass Function (PMF)?</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#how-do-they-help"><i class="fa fa-check"></i><b>1.5.3</b> How Do They Help?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example"><i class="fa fa-check"></i><b>1.6.1</b> Example</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#example-1"><i class="fa fa-check"></i><b>1.6.2</b> Example:</a></li>
+<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#example-2"><i class="fa fa-check"></i><b>1.6.3</b> Example</a></li>
+<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#example-determining-the-probability-mass-function-of-a-random-variable"><i class="fa fa-check"></i><b>1.6.4</b> Example: Determining the Probability Mass Function of a Random Variable</a></li>
+<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#example-3"><i class="fa fa-check"></i><b>1.6.5</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#cumulative-distribution-functions-cdfs"><i class="fa fa-check"></i><b>1.7</b> Cumulative Distribution Functions (CDFs)</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#properties-of-cdfs"><i class="fa fa-check"></i><b>1.7.1</b> Properties of CDFs:</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#example-4"><i class="fa fa-check"></i><b>1.7.2</b> Example</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#example-5"><i class="fa fa-check"></i><b>1.7.3</b> Example:</a></li>
+<li class="chapter" data-level="1.7.4" data-path="index.html"><a href="index.html#example-6"><i class="fa fa-check"></i><b>1.7.4</b> Example</a></li>
+<li class="chapter" data-level="1.7.5" data-path="index.html"><a href="index.html#example-7"><i class="fa fa-check"></i><b>1.7.5</b> Example</a></li>
+<li class="chapter" data-level="1.7.6" data-path="index.html"><a href="index.html#example-8"><i class="fa fa-check"></i><b>1.7.6</b> Example:</a></li>
+<li class="chapter" data-level="1.7.7" data-path="index.html"><a href="index.html#example-9"><i class="fa fa-check"></i><b>1.7.7</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html"><i class="fa fa-check"></i><b>2</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#the-probability-mass-function"><i class="fa fa-check"></i><b>2.1</b> The Probability Mass Function</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-10"><i class="fa fa-check"></i><b>2.1.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable"><i class="fa fa-check"></i><b>2.2</b> Binomial Random Variable</a></li>
+<li class="chapter" data-level="2.3" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable-1"><i class="fa fa-check"></i><b>2.3</b> Binomial Random Variable</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-11"><i class="fa fa-check"></i><b>2.3.1</b> Example</a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-12"><i class="fa fa-check"></i><b>2.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-binomial-probabilities"><i class="fa fa-check"></i><b>2.4</b> Cumulative Binomial Probabilities</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-13"><i class="fa fa-check"></i><b>2.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-probability-distributions"><i class="fa fa-check"></i><b>2.5</b> Cumulative Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-14"><i class="fa fa-check"></i><b>2.5.1</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html"><i class="fa fa-check"></i><b>3</b> The Poisson Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-of-poisson-distribution"><i class="fa fa-check"></i><b>3.1</b> Example of Poisson Distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#poisson-random-variable"><i class="fa fa-check"></i><b>3.2</b> Poisson Random Variable</a></li>
+<li class="chapter" data-level="3.3" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#finding-poisson-probabilities"><i class="fa fa-check"></i><b>3.3</b> Finding Poisson Probabilities</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-15"><i class="fa fa-check"></i><b>3.3.1</b> Example</a></li>
+<li class="chapter" data-level="3.3.2" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-16"><i class="fa fa-check"></i><b>3.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#poisson-properties"><i class="fa fa-check"></i><b>3.4</b> Poisson Properties</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html"><i class="fa fa-check"></i><b>4</b> Continuous Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#probability-density-functions"><i class="fa fa-check"></i><b>4.1</b> Probability Density Functions</a></li>
+<li class="chapter" data-level="4.2" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#probability-density-function-p.d.f."><i class="fa fa-check"></i><b>4.2</b> Probability Density Function (“p.d.f.”)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-17"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+<li class="chapter" data-level="4.2.2" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-18"><i class="fa fa-check"></i><b>4.2.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#cumulative-distribution-functions"><i class="fa fa-check"></i><b>4.3</b> Cumulative Distribution Functions</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#cumulative-distribution-function-c.d.f."><i class="fa fa-check"></i><b>4.3.1</b> Cumulative Distribution Function (“c.d.f.”)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-19"><i class="fa fa-check"></i><b>4.3.2</b> Example</a></li>
+<li class="chapter" data-level="4.3.3" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#example-20"><i class="fa fa-check"></i><b>4.3.3</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distribution Theory</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuous-random-variables" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Continuous Random Variables<a href="continuous-random-variables.html#continuous-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probability-density-functions" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Probability Density Functions<a href="continuous-random-variables.html#probability-density-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A continuous random variable takes on an uncountably infinite number of possible values. For a discrete random variable X that takes on a finite or countably infinite number of possible values, we determined <span class="math inline">\(P(X=x)\)</span> for all of the possible values of X, and called it the probability mass function (“p.m.f.”). For continuous random variables, as we shall soon see, the probability that
+takes on any particular value x is 0. That is, finding <span class="math inline">\(P(X=x)\)</span> for a continuous random variable X is not going to work. Instead, we’ll need to find the probability that X falls in some interval <span class="math inline">\((a, b)\)</span>, that is, we’ll need to find <span class="math inline">\(P(a&lt;X&lt;b)\)</span>. We’ll do that using a probability density function (“p.d.f.”). We’ll first motivate a p.d.f. with an example, and then we’ll formally define it.</p>
+</div>
+<div id="probability-density-function-p.d.f." class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Probability Density Function (“p.d.f.”)<a href="continuous-random-variables.html#probability-density-function-p.d.f." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>probability density function (“p.d.f.”)</strong> of a continuous random variable <span class="math inline">\(X\)</span> with support <span class="math inline">\(S\)</span> is an integrable function <span class="math inline">\(f(x)\)</span> satisfying the following:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x)\)</span> is positive everywhere in the support <span class="math inline">\(S\)</span>, that is, <span class="math inline">\(f(x)&gt;0\)</span>, for all <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span></li>
+<li>The area under the curve <span class="math inline">\(f(x)\)</span> in the support <span class="math inline">\(S\)</span> is 1, that is:
+<span class="math display">\[\int_S f(x)dx=1\]</span></li>
+<li>If <span class="math inline">\(f(x)\)</span> is the p.d.f. of <span class="math inline">\(x\)</span>, then the probability that x, belongs to A, where A is some interval, is given by the integral of <span class="math inline">\(f(x)\)</span> over that interval, that is:</li>
+</ol>
+<p><span class="math display">\[P(X \in A)=\int_A f(x)dx\]</span></p>
+<p>As you can see, the definition for the p.d.f. of a continuous random variable differs from the definition for the p.m.f. of a discrete random variable by simply changing the summations that appeared in the discrete case to integrals in the continuous case. Let’s test this definition out on an example.</p>
+<div id="example-17" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Example<a href="continuous-random-variables.html#example-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let X be a continuous random variable whose probability density function is:</p>
+<p><span class="math inline">\(f(x)=3x^2, \qquad 0&lt;x&lt;1\)</span></p>
+<p>To prove that <span class="math inline">\(f(x) = 3x^2\)</span> is a valid probability density function (pdf) for the continuous random variable <span class="math inline">\(X\)</span> over the interval <span class="math inline">\(0 &lt; x &lt; 1\)</span>, we need to verify two conditions:</p>
+<ol style="list-style-type: decimal">
+<li>Non-negativity: <span class="math inline">\(f(x) \geq 0\)</span> for all <span class="math inline">\(x\)</span> in the support of <span class="math inline">\(X\)</span>.</li>
+<li>Integrates to 1: <span class="math inline">\(\int_{-\infty}^{\infty} f(x) \, dx = 1\)</span>.</li>
+</ol>
+<p>Let’s prove each condition:</p>
+<ol style="list-style-type: decimal">
+<li>Non-negativity:
+<ul>
+<li>For <span class="math inline">\(0 &lt; x &lt; 1\)</span>, <span class="math inline">\(x^2\)</span> is always non-negative.</li>
+<li>Multiplying by a positive constant, <span class="math inline">\(3\)</span>, doesn’t change the sign.</li>
+<li>Therefore, <span class="math inline">\(f(x) = 3x^2\)</span> is non-negative for <span class="math inline">\(0 &lt; x &lt; 1\)</span>.</li>
+</ul></li>
+<li>Integrates to 1:
+<span class="math display">\[
+\int_{-\infty}^{\infty} f(x) \, dx = \int_{0}^{1} 3x^2 \, dx = \left[ x^3 \right]_{0}^{1} = 1 - 0 = 1
+\]</span>
+<ul>
+<li>Thus, the integral of <span class="math inline">\(f(x)\)</span> over the entire support <span class="math inline">\(0 &lt; x &lt; 1\)</span> equals 1.</li>
+</ul></li>
+</ol>
+<p>Since <span class="math inline">\(f(x) = 3x^2\)</span> satisfies both conditions, it is a valid probability density function for the continuous random variable <span class="math inline">\(X\)</span> over the interval <span class="math inline">\(0 &lt; x &lt; 1\)</span>.</p>
+<p>b.) What is the probability that X falls between 1/2 and 1? That is, what is <span class="math inline">\(P\left(\frac{1}{2}&lt;X&lt;1\right)\)</span>?</p>
+<p>To find the probability that <span class="math inline">\(X\)</span> falls between <span class="math inline">\(\frac{1}{2}\)</span> and 1, denoted as <span class="math inline">\(P\left(\frac{1}{2}&lt;X&lt;1\right)\)</span>, we need to integrate the probability density function <span class="math inline">\(f(x)\)</span> over the interval <span class="math inline">\(\left(\frac{1}{2}, 1\right)\)</span>:</p>
+<p><span class="math display">\[
+P\left(\frac{1}{2}&lt;X&lt;1\right) = \int_{1/2}^{1} f(x) \, dx
+\]</span></p>
+<p>Given that the probability density function <span class="math inline">\(f(x) = 3x^2\)</span> for <span class="math inline">\(0 &lt; x &lt; 1\)</span>, we can perform the integration:</p>
+<p><span class="math display">\[
+P\left(\frac{1}{2}&lt;X&lt;1\right) = \int_{1/2}^{1} 3x^2 \, dx
+\]</span></p>
+<p>Let’s calculate this integral:</p>
+<p><span class="math display">\[
+P\left(\frac{1}{2}&lt;X&lt;1\right) = \left[ x^3 \right]_{1/2}^{1} = 1^3 - \left(\frac{1}{2}\right)^3 = 1 - \frac{1}{8} = \frac{7}{8}
+\]</span></p>
+<p>Therefore, the probability that <span class="math inline">\(X\)</span> falls between <span class="math inline">\(\frac{1}{2}\)</span> and 1 is <span class="math inline">\(\frac{7}{8}\)</span>.</p>
+<p>c.) What is <span class="math inline">\(P\left(X=\frac{1}{2}\right)\)</span>?</p>
+<p>Since <span class="math inline">\(X\)</span> is a continuous random variable, the probability <span class="math inline">\(P\left(X = \frac{1}{2}\right)\)</span> for a specific value <span class="math inline">\(x = \frac{1}{2}\)</span> is zero. This is because for continuous random variables, the probability of any single point is infinitesimally small and thus considered to be zero.</p>
+<p>In other words, for a continuous probability density function <span class="math inline">\(f(x)\)</span>, the probability of <span class="math inline">\(X\)</span> being exactly equal to any specific value <span class="math inline">\(x\)</span> is zero.</p>
+<p>So, <span class="math inline">\(P\left(X = \frac{1}{2}\right) = 0\)</span>.</p>
+</div>
+<div id="example-18" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Example<a href="continuous-random-variables.html#example-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let X be a continuous random variable whose probability density function is:
+<span class="math display">\[f(x)=\dfrac{x^3}{4}\]</span>
+for an interval <span class="math inline">\(0&lt;x&lt;c\)</span>. What is the value of the constant <span class="math inline">\(c\)</span> that makes <span class="math inline">\(f(x)\)</span> a valid probability density function?</p>
+<p>To find the value of the constant <span class="math inline">\(c\)</span> that makes <span class="math inline">\(f(x)\)</span> a valid probability density function, we need to ensure that the total area under the density function over the interval <span class="math inline">\(0 &lt; x &lt; c\)</span> is equal to 1.</p>
+<p>The integral of <span class="math inline">\(f(x)\)</span> over the interval <span class="math inline">\(0 &lt; x &lt; c\)</span> should be equal to 1:</p>
+<p><span class="math display">\[
+\int_{0}^{c} f(x) \, dx = 1
+\]</span></p>
+<p>Given that <span class="math inline">\(f(x) = \frac{x^3}{4}\)</span> for <span class="math inline">\(0 &lt; x &lt; c\)</span>, we can integrate this function over the interval <span class="math inline">\(0 &lt; x &lt; c\)</span> and set the result equal to 1 to find the value of <span class="math inline">\(c\)</span>.</p>
+<p><span class="math display">\[
+\int_{0}^{c} \frac{x^3}{4} \, dx = 1
+\]</span></p>
+<p>Let’s solve this integral equation to find the value of <span class="math inline">\(c\)</span>.</p>
+<p><span class="math display">\[
+\int_{0}^{c} \frac{x^3}{4} \, dx = \frac{1}{4} \int_{0}^{c} x^3 \, dx
+\]</span></p>
+<p><span class="math display">\[
+= \frac{1}{4} \left[ \frac{x^4}{4} \right]_{0}^{c}
+\]</span></p>
+<p><span class="math display">\[
+= \frac{1}{4} \left( \frac{c^4}{4} - 0 \right)
+\]</span></p>
+<p><span class="math display">\[
+= \frac{c^4}{16}
+\]</span></p>
+<p>Now, setting this equal to 1:</p>
+<p><span class="math display">\[
+\frac{c^4}{16} = 1
+\]</span></p>
+<p><span class="math display">\[
+c^4 = 16
+\]</span></p>
+<p><span class="math display">\[
+c = \sqrt[4]{16}
+\]</span></p>
+<p><span class="math display">\[
+c = 2
+\]</span></p>
+<p>Therefore, the value of the constant <span class="math inline">\(c\)</span> that makes <span class="math inline">\(f(x)\)</span> a valid probability density function is <span class="math inline">\(c = 2\)</span>.</p>
+<p>This means the interval for the density function <span class="math inline">\(f(x)\)</span> becomes <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p>
+</div>
+</div>
+<div id="cumulative-distribution-functions" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Cumulative Distribution Functions<a href="continuous-random-variables.html#cumulative-distribution-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You might recall that the cumulative distribution function is defined for discrete random variables as:</p>
+<p><span class="math display">\[F(x)=P(X\leq x)=\sum\limits_{t \leq x} f(t)\]</span>
+Again, <span class="math inline">\(f(x)\)</span> accumulates all of the probability less than or equal to <span class="math inline">\(x\)</span>. The cumulative distribution function for continuous random variables is just a straightforward extension of that of the discrete case. All we need to do is replace the summation with an integral.</p>
+<div id="cumulative-distribution-function-c.d.f." class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Cumulative Distribution Function (“c.d.f.”)<a href="continuous-random-variables.html#cumulative-distribution-function-c.d.f." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The cumulative distribution function (“c.d.f.”) of a continuous random variable X is defined as:
+<span class="math display">\[F(x)=\int_{-\infty}^x f(t)dt\]</span></p>
+<p>for <span class="math inline">\(-\infty&lt;x&lt;\infty\)</span>.</p>
+<p>You might recall, for discrete random variables, that <span class="math inline">\(F(x)\)</span> is, in general, a non-decreasing step function. For continuous random variables, <span class="math inline">\(F(x)\)</span> is a non-decreasing continuous function.</p>
+</div>
+<div id="example-19" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Example<a href="continuous-random-variables.html#example-19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s return to the example in which X has the following probability density function:
+<span class="math display">\[f(x)=3x^2, \qquad 0&lt;x&lt;1\]</span></p>
+<p>What is the cumulative distribution function <span class="math inline">\(F(x)\)</span>?</p>
+<p>To find the cumulative distribution function <span class="math inline">\(F(x)\)</span> for the given probability density function <span class="math inline">\(f(x) = 3x^2\)</span> over the interval <span class="math inline">\(0 &lt; x &lt; 1\)</span>, we integrate <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(x\)</span>.</p>
+<p>The cumulative distribution function <span class="math inline">\(F(x)\)</span> is defined as:</p>
+<p><span class="math display">\[F(x) = \int_{0}^{x} f(t) \, dt\]</span></p>
+<p>Given <span class="math inline">\(f(x) = 3x^2\)</span>, let’s integrate it with respect to <span class="math inline">\(t\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[F(x) = \int_{0}^{x} 3t^2 \, dt\]</span></p>
+<p><span class="math display">\[= \left[t^3\right]_{0}^{x}\]</span></p>
+<p><span class="math display">\[= x^3 - 0^3\]</span></p>
+<p><span class="math display">\[= x^3\]</span></p>
+<p>Therefore, the cumulative distribution function <span class="math inline">\(F(x)\)</span> for <span class="math inline">\(0 &lt; x &lt; 1\)</span> is:</p>
+<p><span class="math display">\[F(x) = x^3\]</span></p>
+<p>This function represents the probability that <span class="math inline">\(X\)</span> takes on a value less than or equal to <span class="math inline">\(x\)</span>, for <span class="math inline">\(0 &lt; x &lt; 1\)</span>.</p>
+</div>
+<div id="example-20" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Example<a href="continuous-random-variables.html#example-20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s return to the example in which X has the following probability density function:</p>
+<p><span class="math display">\[f(x)=\dfrac{x^3}{4}\]</span>
+for <span class="math inline">\(0&lt;x&lt;2\)</span>. What is the cumulative distribution function of X?</p>
+<p>To find the cumulative distribution function <span class="math inline">\(F(x)\)</span> for the given probability density function <span class="math inline">\(f(x) = \frac{x^3}{4}\)</span> over the interval <span class="math inline">\(0 &lt; x &lt; 2\)</span>, we integrate <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(x\)</span>.</p>
+<p>The cumulative distribution function <span class="math inline">\(F(x)\)</span> is defined as:</p>
+<p><span class="math display">\[F(x) = \int_{0}^{x} f(t) \, dt\]</span></p>
+<p>Given <span class="math inline">\(f(x) = \frac{x^3}{4}\)</span>, let’s integrate it with respect to <span class="math inline">\(t\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[F(x) = \int_{0}^{x} \frac{t^3}{4} \, dt\]</span></p>
+<p><span class="math display">\[= \frac{1}{4} \int_{0}^{x} t^3 \, dt\]</span></p>
+<p><span class="math display">\[= \frac{1}{4} \left[\frac{t^4}{4}\right]_{0}^{x}\]</span></p>
+<p><span class="math display">\[= \frac{1}{4} \left(\frac{x^4}{4} - 0^4\right)\]</span></p>
+<p><span class="math display">\[= \frac{1}{4} \cdot \frac{x^4}{4}\]</span></p>
+<p><span class="math display">\[= \frac{x^4}{16}\]</span></p>
+<p>Therefore, the cumulative distribution function <span class="math inline">\(F(x)\)</span> for <span class="math inline">\(0 &lt; x &lt; 2\)</span> is:</p>
+<p><span class="math display">\[F(x) = \frac{x^4}{16}\]</span></p>
+<p>This function represents the probability that <span class="math inline">\(X\)</span> takes on a value less than or equal to <span class="math inline">\(x\)</span>, for <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-poisson-distribution.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/xadex01/Distribution_Theory/edit/main/Chapter-4.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/xadex01/Distribution_Theory/blob/main/Chapter-4.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
