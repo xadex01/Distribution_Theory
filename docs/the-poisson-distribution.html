@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 The Poisson Distribution | Distribution Theory</title>
+  <meta name="description" content="Chapter 3 The Poisson Distribution | Distribution Theory" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 The Poisson Distribution | Distribution Theory" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 The Poisson Distribution | Distribution Theory" />
+  
+  
+  
+
+<meta name="author" content="AbdulHafiz Abba" />
+
+
+<meta name="date" content="2024-03-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-binomial-distribution.html"/>
+<link rel="next" href="discrete-uniform-distribution.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Distribution Theory</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Distribution Functions, Probability Densities, and Standard Distribution Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#distribution-functions"><i class="fa fa-check"></i><b>1.1</b> Distribution Functions</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#probability-densities-and-their-relations"><i class="fa fa-check"></i><b>1.2</b> Probability Densities and their Relations</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#standard-distribution-functions"><i class="fa fa-check"></i><b>1.3</b> Standard Distribution Functions</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#discrete-random-variables"><i class="fa fa-check"></i><b>1.4</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#example-1-selecting-fans-at-a-football-game"><i class="fa fa-check"></i><b>1.4.1</b> Example 1: Selecting Fans at a Football Game</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#notes"><i class="fa fa-check"></i><b>1.4.2</b> Notes:</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#probability-distributions-and-probability-mass-functions"><i class="fa fa-check"></i><b>1.5</b> Probability Distributions and Probability Mass Functions</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#what-is-a-probability-distribution"><i class="fa fa-check"></i><b>1.5.1</b> What is a Probability Distribution?</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#what-is-a-probability-mass-function-pmf"><i class="fa fa-check"></i><b>1.5.2</b> What is a Probability Mass Function (PMF)?</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#how-do-they-help"><i class="fa fa-check"></i><b>1.5.3</b> How Do They Help?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#probability-mass-function-pmf-for-discrete-random-variables"><i class="fa fa-check"></i><b>1.6</b> Probability Mass Function (PMF) for Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#example"><i class="fa fa-check"></i><b>1.6.1</b> Example</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#example-1"><i class="fa fa-check"></i><b>1.6.2</b> Example:</a></li>
+<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#example-2"><i class="fa fa-check"></i><b>1.6.3</b> Example</a></li>
+<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#example-determining-the-probability-mass-function-of-a-random-variable"><i class="fa fa-check"></i><b>1.6.4</b> Example: Determining the Probability Mass Function of a Random Variable</a></li>
+<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#example-3"><i class="fa fa-check"></i><b>1.6.5</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#cumulative-distribution-functions-cdfs"><i class="fa fa-check"></i><b>1.7</b> Cumulative Distribution Functions (CDFs)</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#properties-of-cdfs"><i class="fa fa-check"></i><b>1.7.1</b> Properties of CDFs:</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#example-4"><i class="fa fa-check"></i><b>1.7.2</b> Example</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#example-5"><i class="fa fa-check"></i><b>1.7.3</b> Example:</a></li>
+<li class="chapter" data-level="1.7.4" data-path="index.html"><a href="index.html#example-6"><i class="fa fa-check"></i><b>1.7.4</b> Example</a></li>
+<li class="chapter" data-level="1.7.5" data-path="index.html"><a href="index.html#example-7"><i class="fa fa-check"></i><b>1.7.5</b> Example</a></li>
+<li class="chapter" data-level="1.7.6" data-path="index.html"><a href="index.html#example-8"><i class="fa fa-check"></i><b>1.7.6</b> Example:</a></li>
+<li class="chapter" data-level="1.7.7" data-path="index.html"><a href="index.html#example-9"><i class="fa fa-check"></i><b>1.7.7</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html"><i class="fa fa-check"></i><b>2</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#the-probability-mass-function"><i class="fa fa-check"></i><b>2.1</b> The Probability Mass Function</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-10"><i class="fa fa-check"></i><b>2.1.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable"><i class="fa fa-check"></i><b>2.2</b> Binomial Random Variable</a></li>
+<li class="chapter" data-level="2.3" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#binomial-random-variable-1"><i class="fa fa-check"></i><b>2.3</b> Binomial Random Variable</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-11"><i class="fa fa-check"></i><b>2.3.1</b> Example</a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-12"><i class="fa fa-check"></i><b>2.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-binomial-probabilities"><i class="fa fa-check"></i><b>2.4</b> Cumulative Binomial Probabilities</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-13"><i class="fa fa-check"></i><b>2.4.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#cumulative-probability-distributions"><i class="fa fa-check"></i><b>2.5</b> Cumulative Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-binomial-distribution.html"><a href="the-binomial-distribution.html#example-14"><i class="fa fa-check"></i><b>2.5.1</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html"><i class="fa fa-check"></i><b>3</b> The Poisson Distribution</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-of-poisson-distribution"><i class="fa fa-check"></i><b>3.1</b> Example of Poisson Distribution</a></li>
+<li class="chapter" data-level="3.2" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#poisson-random-variable"><i class="fa fa-check"></i><b>3.2</b> Poisson Random Variable</a></li>
+<li class="chapter" data-level="3.3" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#finding-poisson-probabilities"><i class="fa fa-check"></i><b>3.3</b> Finding Poisson Probabilities</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-15"><i class="fa fa-check"></i><b>3.3.1</b> Example</a></li>
+<li class="chapter" data-level="3.3.2" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#example-16"><i class="fa fa-check"></i><b>3.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="the-poisson-distribution.html"><a href="the-poisson-distribution.html#poisson-properties"><i class="fa fa-check"></i><b>3.4</b> Poisson Properties</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html"><i class="fa fa-check"></i><b>4</b> Discrete Uniform Distribution</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#mathematical-definition"><i class="fa fa-check"></i><b>4.1</b> Mathematical Definition</a></li>
+<li class="chapter" data-level="4.2" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#social-worked-examples"><i class="fa fa-check"></i><b>4.2</b> Social Worked Examples</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-1-rolling-a-fair-six-sided-die"><i class="fa fa-check"></i><b>4.2.1</b> Example 1: Rolling a Fair Six-Sided Die</a></li>
+<li class="chapter" data-level="4.2.2" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-2-selecting-a-random-card-from-a-standard-deck"><i class="fa fa-check"></i><b>4.2.2</b> Example 2: Selecting a Random Card from a Standard Deck</a></li>
+<li class="chapter" data-level="4.2.3" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#example-3-random-number-generator"><i class="fa fa-check"></i><b>4.2.3</b> Example 3: Random Number Generator</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="discrete-uniform-distribution.html"><a href="discrete-uniform-distribution.html#conclusion"><i class="fa fa-check"></i><b>4.3</b> Conclusion</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Distribution Theory</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-poisson-distribution" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> The Poisson Distribution<a href="the-poisson-distribution.html#the-poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let the discrete random variable <span class="math inline">\(X\)</span> denote the number of times an event occurs in an interval of time (or space). Then <span class="math inline">\(X\)</span> may be a Poisson random variable with <span class="math inline">\(x=0, 1, 2, \ldots\)</span></p>
+<div id="example-of-poisson-distribution" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Example of Poisson Distribution<a href="the-poisson-distribution.html#example-of-poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Let X equal the number of Alaskan salmon caught in a squid driftnet. (This is again an example of an interval of space — the space being the squid driftnet.)</li>
+<li>Let X equal the number of customers at an ATM in 10-minute intervals.</li>
+<li>Let X equal the number of students arriving during office hours.</li>
+</ol>
+</div>
+<div id="poisson-random-variable" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Poisson Random Variable<a href="the-poisson-distribution.html#poisson-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If X is a Poisson random variable, then the probability mass function is:</p>
+<p><span class="math display">\[f(x)=\dfrac{e^{-\lambda} \lambda^x}{x!}\]</span></p>
+<p>for <span class="math inline">\(x=0, 1, 2, \ldots\)</span> and <span class="math inline">\(\lambda&gt;0\)</span>, where <span class="math inline">\(\lambda\)</span> will be shown later to be both the mean and the variance of X.</p>
+<p>Recall that the mathematical constant e is the unique real number such that the value of the derivative (slope of the tangent line) of the function <span class="math inline">\(f(x)=e^x\)</span> at the point <span class="math inline">\(x=0\)</span> is equal to 1. It turns out that the constant is irrational, but to five decimal places, it equals:</p>
+<p><span class="math display">\[\mathbf{e} = 2.71828\]</span></p>
+<p>Also, note that there are (theoretically) an infinite number of possible Poisson distributions. Any specific Poisson distribution depends on the parameter <span class="math inline">\(\lambda\)</span>.</p>
+</div>
+<div id="finding-poisson-probabilities" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Finding Poisson Probabilities<a href="the-poisson-distribution.html#finding-poisson-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-15" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Example<a href="the-poisson-distribution.html#example-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let X equal the number of typos on a printed page with a mean of 3 typos per page. What is the probability that a randomly selected page has at least one typo on it?</p>
+<p><strong>Solution</strong></p>
+<p>To solve the problem, we can use the Poisson distribution, which models the number of events occurring within a fixed interval of time or space, given the average rate of occurrence.</p>
+<p>In this case, the number of typos on a printed page follows a Poisson distribution with a mean of 3 typos per page.</p>
+<p>The probability mass function (PMF) of the Poisson distribution is given by:</p>
+<p><span class="math display">\[
+P(X = k) = \frac{{e^{-\lambda} \lambda^k}}{{k!}}
+\]</span></p>
+<p>where:
+- <span class="math inline">\(\lambda\)</span> is the average rate of occurrence (mean),
+- <span class="math inline">\(k\)</span> is the number of events (in this case, typos),
+- <span class="math inline">\(e\)</span> is Euler’s number, approximately equal to 2.71828.</p>
+<p>We’re interested in finding the probability that a randomly selected page has at least one typo, which is equivalent to finding <span class="math inline">\(P(X \geq 1)\)</span>.</p>
+<p>Since the Poisson distribution is discrete, we can calculate this probability by summing the probabilities of having 1 or more typos:</p>
+<p><span class="math display">\[
+P(X \geq 1) = 1 - P(X = 0) = 1 - \frac{{e^{-\lambda} \lambda^0}}{{0!}}
+\]</span></p>
+<p>Substituting <span class="math inline">\(\lambda = 3\)</span>, we get:</p>
+<p><span class="math display">\[
+P(X \geq 1) = 1 - e^{-3}
+\]</span></p>
+<p>Now, let’s compute the value of this expression.</p>
+<p><span class="math display">\[
+P(X \geq 1) = 1 - e^{-3} \approx 1 - 0.0498 \approx 0.9502
+\]</span></p>
+<p>So, the probability that a randomly selected page has at least one typo on it is approximately <span class="math inline">\(0.9502\)</span>, or <span class="math inline">\(95.02\%\)</span>.</p>
+<p>b.) What is the probability that a randomly selected page has at most one typo on it?</p>
+<p><strong>Solution</strong></p>
+<p>To find the probability that a randomly selected page has at most one typo on it, we need to calculate <span class="math inline">\(P(X \leq 1)\)</span>, where <span class="math inline">\(X\)</span> follows a Poisson distribution with a mean of 3 typos per page.</p>
+<p>Since the Poisson distribution is discrete, we can compute this probability by summing the probabilities of having 0 or 1 typos:</p>
+<p><span class="math display">\[
+P(X \leq 1) = P(X = 0) + P(X = 1)
+\]</span></p>
+<p>Using the Poisson probability mass function (PMF), which is given by <span class="math inline">\(P(X = k) = \frac{{e^{-\lambda} \lambda^k}}{{k!}}\)</span>, we can calculate:</p>
+<p><span class="math display">\[
+P(X = 0) = \frac{{e^{-3} \cdot 3^0}}{{0!}} = e^{-3}
+\]</span>
+<span class="math display">\[
+P(X = 1) = \frac{{e^{-3} \cdot 3^1}}{{1!}} = 3e^{-3}
+\]</span></p>
+<p>Now, we can compute the sum:</p>
+<p><span class="math display">\[
+P(X \leq 1) = e^{-3} + 3e^{-3} = (1 + 3)e^{-3} = 4e^{-3}
+\]</span></p>
+<p>So, the probability that a randomly selected page has at most one typo on it is <span class="math inline">\(4e^{-3}\)</span>.</p>
+<p>Now, let’s compute the value of this expression:</p>
+<p><span class="math display">\[
+P(X \leq 1) = 4e^{-3} \approx 4 \times 0.0498 \approx 0.1992
+\]</span></p>
+<p>Therefore, the probability that a randomly selected page has at most one typo on it is approximately <span class="math inline">\(0.1992\)</span>, or <span class="math inline">\(19.92\%\)</span>.</p>
+<p>Just as we used a cumulative probability table when looking for binomial probabilities, we could alternatively use a cumulative Poisson probability table.</p>
+</div>
+<div id="example-16" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Example<a href="the-poisson-distribution.html#example-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If X equals the number of typos on a printed page with a mean of 3 typos per page, what is the probability that a randomly selected page has four typos on it?</p>
+<p><strong>Solution</strong>
+The probability that a randomly selected page has four typos on it can be written as <span class="math inline">\(P(X=4)\)</span>. We can calculate <span class="math inline">\(P(X=4)\)</span> by subtracting <span class="math inline">\(P(X\le3)\)</span> from <span class="math inline">\(P(X\le4)\)</span>. To find <span class="math inline">\(P(X\le3)\)</span> and <span class="math inline">\(P(X\le4)\)</span> using the Poisson table, we:</p>
+<ol style="list-style-type: decimal">
+<li>Find the column headed by <span class="math inline">\(\lambda=3\)</span>.</li>
+<li>Find the 3 in the first column on the left, since we want to find <span class="math inline">\(F(3)=P(X\le 3)\)</span>. And, find the 4 in the first column on the left, since we want to find <span class="math inline">\(F(4)=P(X\le 4)\)</span>.</li>
+</ol>
+<p>Now, all we need to do is, first, read the probability value where the <span class="math inline">\(\lambda=3\)</span> column and the <span class="math inline">\(x=3\)</span>
+row intersect, and, second, read the probability value where the <span class="math inline">\(\lambda=3\)</span> column and the <span class="math inline">\(x=4\)</span> row intersect. What do you get?</p>
+<p><img src="images/image4.png" />
+The cumulative Poisson probability table tells us that finding <span class="math inline">\(P(X\le 4)=0.815\)</span> and <span class="math inline">\(P(X\le 3)=0.647\)</span>. Therefore:
+<span class="math display">\[P(X=4)=P(X\le 4)-P(X\le 3)=0.815-0.647=0.168\]</span></p>
+<p>That is, there is about a 17% chance that a randomly selected page would have four typos on it. Since it wouldn’t take a lot of work in this case, you might want to verify that you’d get the same answer using the Poisson p.m.f.</p>
+</div>
+</div>
+<div id="poisson-properties" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Poisson Properties<a href="the-poisson-distribution.html#poisson-properties" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Just as we did for the other named discrete random variables we’ve studied, on this page, we present and verify four properties of a Poisson random variable.</p>
+<p><strong>Theorem</strong>
+The probability mass function:</p>
+<p><span class="math display">\[f(x)=\dfrac{e^{-\lambda} \lambda^x}{x!}\]</span></p>
+<p>for a Poisson random variable X is a valid p.m.f.</p>
+<p><strong>proof</strong></p>
+<p>To prove that the given function <span class="math inline">\(f(x) = \frac{e^{-\lambda} \lambda^x}{x!}\)</span> is a valid probability mass function (p.m.f.) for a Poisson random variable <span class="math inline">\(X\)</span>, we need to verify two properties:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Non-negativity</strong>: For any non-negative integer <span class="math inline">\(x\)</span>, the terms <span class="math inline">\(e^{-\lambda}\)</span> and <span class="math inline">\(\lambda^x\)</span> are non-negative. Additionally, the factorial <span class="math inline">\(x!\)</span> is also non-negative. Therefore, <span class="math inline">\(f(x) = \frac{e^{-\lambda} \lambda^x}{x!}\)</span> is non-negative for all non-negative integer values of <span class="math inline">\(x\)</span>.</p></li>
+<li><p><strong>Summation to 1</strong>: We need to show that the sum of <span class="math inline">\(f(x)\)</span> over all possible values of <span class="math inline">\(x\)</span> equals 1. Since <span class="math inline">\(X\)</span> is a Poisson random variable, it can take any non-negative integer value. Therefore, we need to sum <span class="math inline">\(f(x)\)</span> from <span class="math inline">\(x = 0\)</span> to <span class="math inline">\(x = \infty\)</span>:</p></li>
+</ol>
+<p><span class="math display">\[
+\sum_{x=0}^{\infty} f(x) = \sum_{x=0}^{\infty} \frac{e^{-\lambda} \lambda^x}{x!}
+\]</span></p>
+<p>Using the Maclaurin series expansion of <span class="math inline">\(e^{\lambda}\)</span>, which is <span class="math inline">\(e^{\lambda} = \sum_{x=0}^{\infty} \frac{\lambda^x}{x!}\)</span>, we can rewrite the sum as:</p>
+<p><span class="math display">\[
+\sum_{x=0}^{\infty} f(x) = e^{-\lambda} \sum_{x=0}^{\infty} \frac{\lambda^x}{x!} = e^{-\lambda} \cdot e^{\lambda} = e^{-\lambda + \lambda} = e^0 = 1
+\]</span></p>
+<p>Therefore, the sum of <span class="math inline">\(f(x)\)</span> over all possible values of <span class="math inline">\(x\)</span> equals 1.</p>
+<p>Since the given function satisfies both properties, we can conclude that <span class="math inline">\(f(x) = \frac{e^{-\lambda} \lambda^x}{x!}\)</span> is a valid probability mass function for a Poisson random variable <span class="math inline">\(X\)</span>.</p>
+<p><strong>Theorem</strong></p>
+<p>The moment generating function of a Poisson random variable X is:</p>
+<p><span class="math display">\[M(t)=e^{\lambda(e^t-1)}\text{ for }-\infty&lt;t&lt;\infty\]</span></p>
+<p><strong>Proof</strong></p>
+<p>To prove that the moment generating function (MGF) of a Poisson random variable <span class="math inline">\(X\)</span> is given by <span class="math inline">\(M(t) = e^{\lambda(e^t - 1)}\)</span> for <span class="math inline">\(-\infty &lt; t &lt; \infty\)</span>, we need to show that it satisfies the definition of the MGF:</p>
+<p><span class="math display">\[
+M(t) = \mathbb{E}(e^{tX})
+\]</span></p>
+<p>where <span class="math inline">\(\mathbb{E}\)</span> denotes the expectation operator.</p>
+<p>Let’s proceed with the proof:</p>
+<p>The MGF of a Poisson random variable <span class="math inline">\(X\)</span> is defined as:</p>
+<p><span class="math display">\[
+M(t) = \mathbb{E}(e^{tX})
+\]</span></p>
+<p>Substituting the probability mass function (PMF) of the Poisson distribution, which is <span class="math inline">\(P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}\)</span>, into the definition of the MGF, we get:</p>
+<p><span class="math display">\[
+M(t) = \sum_{k=0}^{\infty} e^{tk} \frac{e^{-\lambda} \lambda^k}{k!}
+\]</span></p>
+<p>Now, let’s simplify this expression:</p>
+<p><span class="math display">\[
+M(t) = e^{-\lambda} \sum_{k=0}^{\infty} \frac{(e^t \lambda)^k}{k!}
+\]</span></p>
+<p>Using the Maclaurin series expansion of <span class="math inline">\(e^x\)</span>, which is <span class="math inline">\(e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!}\)</span>, we can rewrite the sum as:</p>
+<p><span class="math display">\[
+M(t) = e^{-\lambda} \cdot e^{e^t \lambda}
+\]</span></p>
+<p>Combining the exponential terms, we get:</p>
+<p><span class="math display">\[
+M(t) = e^{\lambda(e^t - 1)}
+\]</span></p>
+<p>Therefore, we have shown that the moment generating function of a Poisson random variable <span class="math inline">\(X\)</span> is indeed <span class="math inline">\(M(t) = e^{\lambda(e^t - 1)}\)</span> for <span class="math inline">\(-\infty &lt; t &lt; \infty\)</span>.</p>
+<p><strong>Theorem</strong></p>
+<p>The mean of a Poisson random variable X is <span class="math inline">\(\lambda\)</span>.</p>
+<p><strong>Proof</strong></p>
+<p>To prove that the mean of a Poisson random variable <span class="math inline">\(X\)</span> is <span class="math inline">\(\lambda\)</span>, we can use the definition of the expected value (mean) for a discrete random variable.</p>
+<p>The mean <span class="math inline">\(\mu\)</span> of a random variable <span class="math inline">\(X\)</span> is given by:</p>
+<p><span class="math display">\[
+\mu = \sum_{x} x \cdot P(X = x)
+\]</span></p>
+<p>For a Poisson random variable <span class="math inline">\(X\)</span> with parameter <span class="math inline">\(\lambda\)</span>, the probability mass function (PMF) is:</p>
+<p><span class="math display">\[
+P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
+\]</span></p>
+<p>Substituting this PMF into the expression for the mean, we get:</p>
+<p><span class="math display">\[
+\mu = \sum_{k=0}^{\infty} k \cdot \frac{e^{-\lambda} \lambda^k}{k!}
+\]</span></p>
+<p>We can simplify this expression using the properties of factorials:</p>
+<p><span class="math display">\[
+\mu = e^{-\lambda} \sum_{k=1}^{\infty} \frac{\lambda^k}{(k-1)!}
+\]</span></p>
+<p>Now, let’s manipulate the sum:</p>
+<p><span class="math display">\[
+\mu = e^{-\lambda} \sum_{k=1}^{\infty} \frac{\lambda^k}{(k-1)!} = e^{-\lambda} \left( \lambda + \sum_{k=2}^{\infty} \frac{\lambda^k}{(k-1)!} \right)
+\]</span></p>
+<p>Notice that the second term in the parentheses is actually the Taylor series expansion of <span class="math inline">\(e^{\lambda} - \lambda - 1\)</span>:</p>
+<p><span class="math display">\[
+\sum_{k=2}^{\infty} \frac{\lambda^k}{(k-1)!} = e^{\lambda} - \lambda - 1
+\]</span></p>
+<p>Therefore, we have:</p>
+<p><span class="math display">\[
+\mu = e^{-\lambda} (\lambda + e^{\lambda} - \lambda - 1) = e^{-\lambda} e^{\lambda} = \lambda
+\]</span></p>
+<p>Hence, we have proven that the mean of a Poisson random variable <span class="math inline">\(X\)</span> is indeed <span class="math inline">\(\lambda\)</span>.</p>
+<p><strong>Theorem</strong>
+The variance of a Poisson random variable X is <span class="math inline">\(\lambda\)</span>.</p>
+<p><strong>Proof</strong></p>
+<p>To prove that the variance of a Poisson random variable <span class="math inline">\(X\)</span> is <span class="math inline">\(\lambda\)</span>, we can use the definition of variance for a discrete random variable.</p>
+<p>The variance <span class="math inline">\(\sigma^2\)</span> of a random variable <span class="math inline">\(X\)</span> is given by:</p>
+<p><span class="math display">\[
+\sigma^2 = \sum_{x} (x - \mu)^2 \cdot P(X = x)
+\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean of <span class="math inline">\(X\)</span>.</p>
+<p>We already know that the mean <span class="math inline">\(\mu\)</span> of a Poisson random variable <span class="math inline">\(X\)</span> is <span class="math inline">\(\lambda\)</span>, as proved earlier. So, we can rewrite the variance formula as:</p>
+<p><span class="math display">\[
+\sigma^2 = \sum_{x} (x - \lambda)^2 \cdot P(X = x)
+\]</span></p>
+<p>For a Poisson random variable <span class="math inline">\(X\)</span> with parameter <span class="math inline">\(\lambda\)</span>, the probability mass function (PMF) is:</p>
+<p><span class="math display">\[
+P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
+\]</span></p>
+<p>Substituting this PMF into the expression for the variance, we get:</p>
+<p><span class="math display">\[
+\sigma^2 = \sum_{k=0}^{\infty} (k - \lambda)^2 \cdot \frac{e^{-\lambda} \lambda^k}{k!}
+\]</span></p>
+<p>We can simplify this expression using the properties of factorials.</p>
+<p>After simplifying, we’ll arrive at <span class="math inline">\(\sigma^2 = \lambda\)</span>. This completes the proof.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-binomial-distribution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discrete-uniform-distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/xadex01/Distribution_Theory/edit/main/Chapter-3.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/xadex01/Distribution_Theory/blob/main/Chapter-3.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

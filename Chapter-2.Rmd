@@ -250,6 +250,29 @@ From the cumulative binomial probability table, we look for the probability of $
 ![](images\image1.png)
 
 Using the cumulative binomial probability table, we find:
-\[P(X\le1 =0.1671\]
+\[P(X\le1 =0.1671)\]
 
 Therefore, the probability that at most 1 out of the 15 sampled individuals has no health insurance is approximately 0.1671. 
+
+**b.) What is the probability that more than 7 have no health insurance?**
+
+**Solution**
+
+As we determined previously, we can calculate $P(X>7)$ by finding $P(X\le7)$ and subtracting it from 1:
+![](images\image2.png)
+The good news is that the cumulative binomial probability table makes it easy to determine $P(X\le7)$ To find $P(X\le7)$ using the binomial table, we:
+
+1.  Find $n=15$ in the first column on the left.
+2.  Find the column containing $p=0.20$.
+3.  Find the 7 in the second column on the left, since we want to find $F(7)=P(X\le 7)$.
+
+Now, all we need to do is read the probability value where the $p=0.20$ column and the $(n=15, x=7)$
+) row intersect. What do you get?
+
+![](images\image3.png)
+
+The cumulative binomial probability table tells us that $P(X\le 7)=0.9958$. Therefore:
+
+\[P(X>7) = 1 − 0.9958 = 0.0042\]
+
+That is, the probability that more than 7 in a random sample of 15 would have no health insurance is 0.0042.

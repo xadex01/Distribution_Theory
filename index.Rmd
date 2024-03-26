@@ -56,12 +56,8 @@ These standard distribution functions play crucial roles in various statistical 
 
 In many real-world scenarios, we encounter random experiments and variables whose outcomes can be analyzed systematically. This chapter focuses on understanding discrete random variables, which are often found in various applications.
 
-### Example 1: Voice Communication System
 
-Consider a voice communication system with 48 external lines. Let's define a random variable \( X \) representing the number of lines in use at a given time. \( X \) can take integer values from 0 to 48. For instance, if 10 lines are in use, \( x = 10 \).
-
-
-### Example 2: Selecting Fans at a Football Game
+### Example 1: Selecting Fans at a Football Game
 
 Suppose we randomly select three fans at a football game between Bauchi State University, Gadau (BASUG) and Abubakar Tafawa Balewa University (ATBU). We want to identify whether each fan is a BASUG fan (\( B \)) or an ATBU fan (\( A \)). This experiment yields the following sample space:
 
@@ -204,13 +200,13 @@ Using the formula for the sum of an infinite geometric series:
 So, the constant \( c \) is 3, making the p.m.f. a valid probability mass function.
 
 
-### Example 3-13: Determining the Probability Mass Function of a Random Variable
+### Example: Determining the Probability Mass Function of a Random Variable
 
 The sample space of a random experiment is \( S = \{a, b, c, d, e, f\} \),and each outcome is equally likely. A random variable is defined as follows:
 
 
 \begin{array}
-Outcome & \(x\) \\
+ Outcome & \(x\) \\
 \hline\\
  a        &  0    \\
  b       &  0    \\
@@ -248,7 +244,7 @@ The probability mass function of \( X \) is given by:
 This PMF describes the probabilities associated with each possible value of the random variable \( X \).
 
 
-### Example 3-25
+### Example
 
 An assembly consists of three mechanical components. The probabilities that the first, second, and third components meet specifications are 0.95, 0.98, and 0.99, respectively. Assume that the components are independent. Determine the probability mass function of the number of components in the assembly that meet specifications.
 
